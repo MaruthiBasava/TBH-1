@@ -140,24 +140,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE SHOULD..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Yxy-s8-HFr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select a person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="PR0-iE-CBN">
+                                <frame key="frameInset" minX="16" minY="294" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="czh-MJ-3PJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" red="0.96862745100000003" green="0.95686274510000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="😏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="AJU-Lo-i5d">
+                                <frame key="frameInset" minX="117" minY="158" width="141" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="zH7-0G-L8T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="128"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.95686274510000002" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDa-4i-MBj">
+                                <frame key="frameInset" minX="133" minY="343" width="109" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="OvP-O0-8xd"/>
+                                    <constraint firstAttribute="height" constant="30" id="iQY-g0-DQU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="tap to select">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JEd-Za-dhw">
+                                <frame key="frameInset" minX="39" minY="493" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93261218070983887" green="0.0" blue="0.08498624712228775" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Yxy-s8-HFr" firstAttribute="leading" secondItem="61n-Mt-VTY" secondAttribute="leadingMargin" id="JBm-Dr-qJj"/>
-                            <constraint firstItem="Yxy-s8-HFr" firstAttribute="top" secondItem="1Yw-fY-gyA" secondAttribute="bottom" constant="8" symbolic="YES" id="Mou-6H-4Dj"/>
-                            <constraint firstItem="d8e-5S-syJ" firstAttribute="top" secondItem="Yxy-s8-HFr" secondAttribute="bottom" constant="590" id="idj-sc-Fpf"/>
-                            <constraint firstItem="Yxy-s8-HFr" firstAttribute="trailing" secondItem="61n-Mt-VTY" secondAttribute="trailingMargin" id="yu5-oh-iad"/>
+                            <constraint firstItem="FDa-4i-MBj" firstAttribute="top" secondItem="PR0-iE-CBN" secondAttribute="bottom" constant="8" symbolic="YES" id="e63-7w-1mf"/>
+                            <constraint firstItem="PR0-iE-CBN" firstAttribute="leading" secondItem="61n-Mt-VTY" secondAttribute="leadingMargin" id="mdB-S0-yeu"/>
+                            <constraint firstItem="PR0-iE-CBN" firstAttribute="centerX" secondItem="FDa-4i-MBj" secondAttribute="centerX" id="oPH-3Z-ezO"/>
+                            <constraint firstItem="PR0-iE-CBN" firstAttribute="top" secondItem="1Yw-fY-gyA" secondAttribute="bottom" constant="230" id="y2x-X8-cGW"/>
+                            <constraint firstItem="PR0-iE-CBN" firstAttribute="trailing" secondItem="61n-Mt-VTY" secondAttribute="trailingMargin" id="yxI-7B-iP9"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GvW-qZ-0St" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="130"/>
+            <point key="canvasLocation" x="1776.8" y="129.98500749625188"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9WW-Ju-v2k">

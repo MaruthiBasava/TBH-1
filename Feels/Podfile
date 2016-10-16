@@ -6,5 +6,5 @@ target 'Feels' do
   use_frameworks!
 
   # Pods for Feels
-  pod 'ActionSheetPicker-3.0'
+  pod "PickerView"
 end

@@ -1,12 +1,12 @@
 PODS:
-  - ActionSheetPicker-3.0 (2.1.0)
+  - PickerView (0.2.2)
 
 DEPENDENCIES:
-  - ActionSheetPicker-3.0
+  - PickerView
 
 SPEC CHECKSUMS:
-  ActionSheetPicker-3.0: db66605feb85689279d328206c61f0e4f398df92
+  PickerView: d6952d565ec80c9fcdbd7dff853723e4df0b2490
 
-PODFILE CHECKSUM: 1b989415005eb55f8fb6b88af56d1a505647a06f
+PODFILE CHECKSUM: 02fec1404d291580acb15b9bc19777bd17d8e92e
 
 COCOAPODS: 1.0.0

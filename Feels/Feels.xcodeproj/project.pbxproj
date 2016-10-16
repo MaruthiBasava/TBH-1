@@ -12,6 +12,11 @@
 		0298B8411DB3474100390925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298B83F1DB3474100390925 /* Main.storyboard */; };
 		0298B8431DB3474100390925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0298B8421DB3474100390925 /* Assets.xcassets */; };
 		0298B8461DB3474100390925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298B8441DB3474100390925 /* LaunchScreen.storyboard */; };
+		0298B84E1DB351BB00390925 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298B84D1DB351BB00390925 /* SendViewController.swift */; };
+		0298B8501DB360B800390925 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298B84F1DB360B800390925 /* UIView.swift */; };
+		0298B8521DB3CEAE00390925 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298B8511DB3CEAE00390925 /* NameViewController.swift */; };
+		0298B8541DB3CEC100390925 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298B8531DB3CEC000390925 /* PhoneViewController.swift */; };
+		0298B8561DB3D0DE00390925 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298B8551DB3D0DE00390925 /* GenderViewController.swift */; };
 		5A3CB2875A8F8745EBF32627 /* Pods_Feels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2922E63EB463AB30E811F9 /* Pods_Feels.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +28,11 @@
 		0298B8421DB3474100390925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0298B8451DB3474100390925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0298B8471DB3474100390925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0298B84D1DB351BB00390925 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
+		0298B84F1DB360B800390925 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		0298B8511DB3CEAE00390925 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		0298B8531DB3CEC000390925 /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		0298B8551DB3D0DE00390925 /* GenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		0C55DDE0283487B6B7CF674D /* Pods-Feels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.debug.xcconfig"; sourceTree = "<group>"; };
 		18531566DA6EE1BE6207C73C /* Pods-Feels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.release.xcconfig"; sourceTree = "<group>"; };
 		6F2922E63EB463AB30E811F9 /* Pods_Feels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,10 +73,15 @@
 			children = (
 				0298B83B1DB3474100390925 /* AppDelegate.swift */,
 				0298B83D1DB3474100390925 /* ViewController.swift */,
+				0298B84D1DB351BB00390925 /* SendViewController.swift */,
 				0298B83F1DB3474100390925 /* Main.storyboard */,
 				0298B8421DB3474100390925 /* Assets.xcassets */,
 				0298B8441DB3474100390925 /* LaunchScreen.storyboard */,
 				0298B8471DB3474100390925 /* Info.plist */,
+				0298B84F1DB360B800390925 /* UIView.swift */,
+				0298B8511DB3CEAE00390925 /* NameViewController.swift */,
+				0298B8531DB3CEC000390925 /* PhoneViewController.swift */,
+				0298B8551DB3D0DE00390925 /* GenderViewController.swift */,
 			);
 			path = Feels;
 			sourceTree = "<group>";
@@ -124,6 +139,7 @@
 					0298B8371DB3474100390925 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = HXVX4CH7QY;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -212,8 +228,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0298B8501DB360B800390925 /* UIView.swift in Sources */,
 				0298B83E1DB3474100390925 /* ViewController.swift in Sources */,
 				0298B83C1DB3474100390925 /* AppDelegate.swift in Sources */,
+				0298B8541DB3CEC100390925 /* PhoneViewController.swift in Sources */,
+				0298B84E1DB351BB00390925 /* SendViewController.swift in Sources */,
+				0298B8521DB3CEAE00390925 /* NameViewController.swift in Sources */,
+				0298B8561DB3D0DE00390925 /* GenderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +362,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icylabs.Feels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -356,7 +377,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icylabs.Feels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

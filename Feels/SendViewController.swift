@@ -15,7 +15,6 @@ class MessageTableViewCell: UITableViewCell {
 
 class SendViewController: UIViewController {
     
-    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var messagesTableView: UITableView!
     @IBOutlet weak var selectButton: UIButton!
     
@@ -35,13 +34,10 @@ class SendViewController: UIViewController {
         messagesTableView.dataSource = self
         
         selectButton.makeRounded()
-        sendButton.makeRounded()
     }
     
-    @IBAction func selectContact(_ sender: UIButton) {
-        let picker = ABPeoplePickerNavigationController()
-        picker.peoplePickerDelegate = self
-        present(picker, animated: true)
+    @IBAction func back(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,42 +45,6 @@ class SendViewController: UIViewController {
     }
     
     @IBAction func send(_ sender: UIButton) {
-    }
-}
-
-extension SendViewController: ABPeoplePickerNavigationControllerDelegate {
-    
-    func peoplePickerNavigationController(_ peoplePicker: ABPeoplePickerNavigationController, didSelectPerson person: ABRecord) {
-        let firstName = ABRecordCopyValue(person, kABPersonFirstNameProperty)
-        let lastName = ABRecordCopyValue(person, kABPersonLastNameProperty)
-        
-        var first = ""
-        var last = ""
-        
-        if firstName != nil {
-            first = firstName?.takeRetainedValue() as? String ?? ""
-        }
-        
-        if lastName != nil {
-            last = lastName?.takeRetainedValue() as? String ?? ""
-        }
-        
-        
-        let personName = "\(first) \(last)"
-        
-        selectButton.setTitle(personName, for: .normal)
-    }
-    
-    func peoplePickerNavigationController(_ peoplePicker: ABPeoplePickerNavigationController, shouldContinueAfterSelectingPerson person: ABRecord) -> Bool {
-        peoplePickerNavigationController(peoplePicker, didSelectPerson: person)
-        
-        peoplePicker.dismiss(animated: true, completion: nil)
-        
-        return false
-    }
-    
-    func peoplePickerNavigationControllerDidCancel(_ peoplePicker: ABPeoplePickerNavigationController) {
-        dismiss(animated: true)
     }
 }
 

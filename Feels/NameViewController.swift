@@ -18,6 +18,7 @@ class NameViewController: UIViewController {
         super.viewDidLoad()
         nameTextField.becomeFirstResponder()
         nextButton.makeRounded()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,7 +1,4 @@
 PODS:
-  - APAddressBook/Core (0.2.3)
-  - APAddressBook/Swift (0.2.3):
-    - APAddressBook/Core
   - Digits (2.2.0):
     - TwitterCore (= 2.2.0)
   - Fabric (1.6.7)
@@ -9,17 +6,15 @@ PODS:
     - Fabric
 
 DEPENDENCIES:
-  - APAddressBook/Swift
   - Digits
   - Fabric
   - TwitterCore
 
 SPEC CHECKSUMS:
-  APAddressBook: 2a91bf05999548bea210ec9d1a68073f4dc8bfce
   Digits: 335c479574eb2bbc50be326c1daf505b68d87135
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   TwitterCore: 115527630bb2986954adc928b8c895a92bcd57e5
 
-PODFILE CHECKSUM: f161aaae2a7fe6b536f48fe24507dff040106e7a
+PODFILE CHECKSUM: d73533dd0291604e48c291dda75a8443d453a41f
 
 COCOAPODS: 1.0.0

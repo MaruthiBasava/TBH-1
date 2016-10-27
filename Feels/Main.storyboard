@@ -271,10 +271,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="message_cell" id="FP2-GP-jRE" customClass="MessageTableViewCell" customModule="Feels" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FP2-GP-jRE" id="Soy-Oc-L8s">
-                                            <frame key="frameInset" width="343" height="44"/>
+                                            <frame key="frameInset" width="1000" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="mi9-mo-hLJ">
@@ -373,6 +373,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let people in your contacts know how you really feel about them." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuM-cg-FLL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="t8Y-1G-OAy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="24"/>
+                                <color key="textColor" red="0.33725490196078434" green="0.81176470588235294" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ng-Im-xuc">
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.23529411764705882" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -386,14 +394,6 @@
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hqs-bC-R5I"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let people in your contacts know how you really feel about them." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuM-cg-FLL">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="t8Y-1G-OAy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="24"/>
-                                <color key="textColor" red="0.33725490196078434" green="0.81176470588235294" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -403,7 +403,7 @@
                             <constraint firstItem="UuM-cg-FLL" firstAttribute="centerX" secondItem="6Ng-Im-xuc" secondAttribute="centerX" id="WSQ-h5-AR0"/>
                             <constraint firstItem="Se3-vm-uRi" firstAttribute="top" secondItem="g8b-Bu-IAA" secondAttribute="bottom" constant="196" id="ZE3-xH-Pyg"/>
                             <constraint firstItem="UuM-cg-FLL" firstAttribute="trailing" secondItem="U6e-qv-lQa" secondAttribute="trailingMargin" id="rAf-Nv-RHA"/>
-                            <constraint firstItem="vCm-QP-e4r" firstAttribute="top" secondItem="6Ng-Im-xuc" secondAttribute="bottom" constant="87" id="rgJ-Wd-qTE"/>
+                            <constraint firstItem="vCm-QP-e4r" firstAttribute="top" secondItem="6Ng-Im-xuc" secondAttribute="bottom" constant="80" id="rgJ-Wd-qTE"/>
                             <constraint firstItem="UuM-cg-FLL" firstAttribute="leading" secondItem="U6e-qv-lQa" secondAttribute="leadingMargin" id="rmg-ES-2n3"/>
                             <constraint firstItem="6Ng-Im-xuc" firstAttribute="leading" secondItem="U6e-qv-lQa" secondAttribute="leadingMargin" constant="75" id="tx4-rj-Ff2"/>
                         </constraints>
@@ -436,20 +436,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FB-V0-whl">
-                                <color key="backgroundColor" red="0.93725490196078431" green="0.23529411764705882" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="dBc-RG-h0U"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="17"/>
-                                <state key="normal" title="Let's go!">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KT0-FV-uxI"/>
-                                    <segue destination="n8P-Rf-6EY" kind="show" id="j38-vq-rWU"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="They won't know how you feel, unless they feel the same way." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfS-sc-jEF">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="5it-JG-28Y"/>
@@ -458,6 +444,20 @@
                                 <color key="textColor" red="0.33725490196078434" green="0.81176470588235294" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FB-V0-whl">
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.23529411764705882" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="dBc-RG-h0U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="17"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KT0-FV-uxI"/>
+                                    <action selector="signUp:" destination="zaC-qP-faz" eventType="touchUpInside" id="ilS-xS-2r1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -468,8 +468,8 @@
                             <constraint firstItem="mmg-L6-yvZ" firstAttribute="top" secondItem="9lo-o8-HTW" secondAttribute="bottom" constant="196" id="KJq-wv-g6I"/>
                             <constraint firstItem="LfS-sc-jEF" firstAttribute="top" secondItem="mmg-L6-yvZ" secondAttribute="bottom" constant="8" symbolic="YES" id="PB4-g3-zPQ"/>
                             <constraint firstItem="mmg-L6-yvZ" firstAttribute="centerX" secondItem="LfS-sc-jEF" secondAttribute="centerX" id="RcF-UL-JTf"/>
-                            <constraint firstItem="0w1-MS-gVe" firstAttribute="top" secondItem="2FB-V0-whl" secondAttribute="bottom" constant="83" id="aUM-QI-HPK"/>
-                            <constraint firstItem="2FB-V0-whl" firstAttribute="leading" secondItem="PZd-KN-3uN" secondAttribute="leadingMargin" constant="55" id="mlY-hX-ejd"/>
+                            <constraint firstItem="0w1-MS-gVe" firstAttribute="top" secondItem="2FB-V0-whl" secondAttribute="bottom" constant="80" id="aUM-QI-HPK"/>
+                            <constraint firstItem="2FB-V0-whl" firstAttribute="leading" secondItem="PZd-KN-3uN" secondAttribute="leadingMargin" constant="8" id="mlY-hX-ejd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -485,7 +485,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8P-Rf-6EY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="FnV-e1-jnT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="FnV-e1-jnT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		020BDE661DB4D71500D40D14 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020BDE651DB4D71500D40D14 /* ContactViewController.swift */; };
+		023719B21DBD675600EEB12E /* DigitsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023719B11DBD675600EEB12E /* DigitsService.swift */; };
 		028685471DB5A89F0083D53E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028685461DB5A89F0083D53E /* IntroViewController.swift */; };
 		028685491DB5ADA00083D53E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028685481DB5ADA00083D53E /* Constants.swift */; };
 		0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		020BDE651DB4D71500D40D14 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		023719B11DBD675600EEB12E /* DigitsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitsService.swift; sourceTree = "<group>"; };
 		028685461DB5A89F0083D53E /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		028685481DB5ADA00083D53E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023719B01DBD674C00EEB12E /* services */ = {
+			isa = PBXGroup;
+			children = (
+				023719B11DBD675600EEB12E /* DigitsService.swift */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
 		02954CD31DB4564900CDDBC5 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 		02954CDE1DB4564900CDDBC5 /* Feels */ = {
 			isa = PBXGroup;
 			children = (
+				023719B01DBD674C00EEB12E /* services */,
 				029CF7751DB6E3EB00987FB7 /* font */,
 				02954CFF1DB4CC1800CDDBC5 /* controllers */,
 				02954CFE1DB4CBF400CDDBC5 /* storyboards */,
@@ -300,6 +311,7 @@
 				020BDE661DB4D71500D40D14 /* ContactViewController.swift in Sources */,
 				02954D031DB4CC3900CDDBC5 /* GenderViewController.swift in Sources */,
 				029CF77D1DB6F2F100987FB7 /* BubbleTransition.swift in Sources */,
+				023719B21DBD675600EEB12E /* DigitsService.swift in Sources */,
 				0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */,
 				029CF7741DB6D7CD00987FB7 /* SelectContactViewController.swift in Sources */,
 				0286854D1DB5B08A0083D53E /* SecondIntroViewController.swift in Sources */,

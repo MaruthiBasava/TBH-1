@@ -9,5 +9,4 @@ target 'Feels' do
   pod 'Fabric'
   pod 'Digits'
   pod 'TwitterCore'
-  pod 'APAddressBook/Swift’
 end

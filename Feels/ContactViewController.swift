@@ -7,12 +7,9 @@
 //
 
 import UIKit
-import APAddressBook
 import AddressBookUI
 
-class ContactViewController: UIViewController {
-    private let addressBook = APAddressBook()
-    
+class ContactViewController: UIViewController {    
     @IBOutlet weak var contactsTableView: UITableView!
     
     override func viewDidLoad() {

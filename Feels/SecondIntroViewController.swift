@@ -10,7 +10,9 @@ import UIKit
 
 class SecondIntroViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
-
+    
+    let digitsService = DigitsService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.makeRounded()
@@ -18,5 +20,9 @@ class SecondIntroViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func signUp(_ sender: UIButton) {
+        digitsService.signup()
     }
 }

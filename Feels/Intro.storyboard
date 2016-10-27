@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2j9-bN-1YY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-Bold.ttf">
+            <string>WorkSans-Bold</string>
+        </array>
+        <array key="WorkSans-Regular.ttf">
+            <string>WorkSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="cnl-Td-sed">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2j9-bN-1YY" customClass="IntroViewController" customModule="Feels" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02Z-AD-cgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3298" y="-349"/>
+        </scene>
+        <!--First Intro View Controller-->
+        <scene sceneID="QmE-t1-KOe">
+            <objects>
+                <viewController storyboardIdentifier="intro_1_vc" id="zcF-Jm-O5o" customClass="FirstIntroViewController" customModule="Feels" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aHw-Y5-FeG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Of6-ML-Sgc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AvX-xv-GgA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😊😂😍😎😏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-78-KcH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="2DQ-wA-5Kp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let people in your contacts know how you really feel about them." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaV-eb-Hdw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="tBB-Nu-YCh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="24"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.81176470590000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f48-b3-1LE">
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.23529411759999999" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="cJb-kU-M10"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="17"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rwc-78-KcH" firstAttribute="centerX" secondItem="yaV-eb-Hdw" secondAttribute="centerX" id="0fp-gO-HWx"/>
+                            <constraint firstItem="f48-b3-1LE" firstAttribute="leading" secondItem="AvX-xv-GgA" secondAttribute="leadingMargin" constant="75" id="7AI-uS-PVu"/>
+                            <constraint firstItem="yaV-eb-Hdw" firstAttribute="trailing" secondItem="AvX-xv-GgA" secondAttribute="trailingMargin" id="GUe-G2-Qpy"/>
+                            <constraint firstItem="yaV-eb-Hdw" firstAttribute="centerX" secondItem="f48-b3-1LE" secondAttribute="centerX" id="Mzp-Bp-h1C"/>
+                            <constraint firstItem="Rwc-78-KcH" firstAttribute="leading" secondItem="AvX-xv-GgA" secondAttribute="leadingMargin" constant="27" id="Nwt-to-myc"/>
+                            <constraint firstItem="yaV-eb-Hdw" firstAttribute="leading" secondItem="AvX-xv-GgA" secondAttribute="leadingMargin" id="dln-W2-ika"/>
+                            <constraint firstItem="Of6-ML-Sgc" firstAttribute="top" secondItem="f48-b3-1LE" secondAttribute="bottom" constant="80" id="dmZ-7m-wOY"/>
+                            <constraint firstItem="yaV-eb-Hdw" firstAttribute="top" secondItem="Rwc-78-KcH" secondAttribute="bottom" constant="8" symbolic="YES" id="qiQ-CT-NUB"/>
+                            <constraint firstItem="Rwc-78-KcH" firstAttribute="top" secondItem="aHw-Y5-FeG" secondAttribute="bottom" constant="196" id="r6P-Ke-dqc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="f48-b3-1LE" id="wqF-HU-IjX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6C-fV-wxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2535.1999999999998" y="-349.47526236881561"/>
+        </scene>
+        <!--Second Intro View Controller-->
+        <scene sceneID="X5d-Bi-1qz">
+            <objects>
+                <viewController storyboardIdentifier="intro_2_vc" id="52i-zI-ZpJ" customClass="SecondIntroViewController" customModule="Feels" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Wz-sC-Bct"/>
+                        <viewControllerLayoutGuide type="bottom" id="ieT-Ve-Uke"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BFn-iS-jQK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="8wL-ZK-6TK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="rZR-dC-1a7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="They won't know how you feel, unless they feel the same way." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4p-ue-jTn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="GlI-sZ-5qK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="24"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.81176470590000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBf-zS-Lic">
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.23529411759999999" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="HmY-1z-qjK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="17"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUp:" destination="52i-zI-ZpJ" eventType="touchUpInside" id="jJJ-td-2qH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8wL-ZK-6TK" firstAttribute="top" secondItem="7Wz-sC-Bct" secondAttribute="bottom" constant="196" id="B4F-h7-HnU"/>
+                            <constraint firstItem="ieT-Ve-Uke" firstAttribute="top" secondItem="JBf-zS-Lic" secondAttribute="bottom" constant="80" id="Itz-4X-x0z"/>
+                            <constraint firstItem="y4p-ue-jTn" firstAttribute="trailing" secondItem="BFn-iS-jQK" secondAttribute="trailingMargin" id="OjT-S8-qBf"/>
+                            <constraint firstItem="y4p-ue-jTn" firstAttribute="top" secondItem="8wL-ZK-6TK" secondAttribute="bottom" constant="8" symbolic="YES" id="Sol-w4-4lf"/>
+                            <constraint firstItem="JBf-zS-Lic" firstAttribute="leading" secondItem="BFn-iS-jQK" secondAttribute="leadingMargin" constant="8" id="VNj-hS-n8s"/>
+                            <constraint firstItem="8wL-ZK-6TK" firstAttribute="leading" secondItem="BFn-iS-jQK" secondAttribute="leadingMargin" constant="27" id="ebF-Ip-WmM"/>
+                            <constraint firstItem="y4p-ue-jTn" firstAttribute="leading" secondItem="BFn-iS-jQK" secondAttribute="leadingMargin" id="oJb-Og-mAy"/>
+                            <constraint firstItem="y4p-ue-jTn" firstAttribute="centerX" secondItem="JBf-zS-Lic" secondAttribute="centerX" id="vu7-64-Pa0"/>
+                            <constraint firstItem="8wL-ZK-6TK" firstAttribute="centerX" secondItem="y4p-ue-jTn" secondAttribute="centerX" id="xlu-Nl-AIB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="JBf-zS-Lic" id="MVJ-Rc-r6M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecZ-zP-keU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1858" y="-349"/>
+        </scene>
+    </scenes>
+</document>

@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let pageControlAppearance = UIPageControl.appearance()
         pageControlAppearance.pageIndicatorTintColor = UIColor.basavaRed().withAlphaComponent(0.75)
         pageControlAppearance.currentPageIndicatorTintColor = UIColor.basavaRed()
+        
         return true
     }
 

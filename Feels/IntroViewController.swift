@@ -14,7 +14,7 @@ class IntroViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Intro", bundle: nil)
         pages.append(storyboard.instantiateViewController(withIdentifier: "intro_1_vc"))
         pages.append(storyboard.instantiateViewController(withIdentifier: "intro_2_vc"))
         
@@ -46,7 +46,7 @@ extension IntroViewController: UIPageViewControllerDataSource {
         }
         
         let nextIndex = index + 1
-        let orderedViewControllersCount = pages.count
+        
         guard pages.count != nextIndex else {
             return nil
         }

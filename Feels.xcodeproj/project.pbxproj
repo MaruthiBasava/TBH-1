@@ -14,19 +14,19 @@
 		0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */; };
 		0286854D1DB5B08A0083D53E /* SecondIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0286854C1DB5B08A0083D53E /* SecondIntroViewController.swift */; };
 		02954CE01DB4564900CDDBC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02954CDF1DB4564900CDDBC5 /* AppDelegate.swift */; };
-		02954CE21DB4564900CDDBC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02954CE11DB4564900CDDBC5 /* ViewController.swift */; };
 		02954CE71DB4564900CDDBC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02954CE61DB4564900CDDBC5 /* Assets.xcassets */; };
 		02954CEA1DB4564900CDDBC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02954CE81DB4564900CDDBC5 /* LaunchScreen.storyboard */; };
 		02954CF31DB4CA9100CDDBC5 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02954CF21DB4CA9100CDDBC5 /* SendViewController.swift */; };
 		02954CFD1DB4CBEC00CDDBC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02954CFC1DB4CBEC00CDDBC5 /* Main.storyboard */; };
 		02954D011DB4CC3100CDDBC5 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02954D001DB4CC3100CDDBC5 /* NameViewController.swift */; };
 		02954D031DB4CC3900CDDBC5 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02954D021DB4CC3900CDDBC5 /* GenderViewController.swift */; };
-		02954D051DB4CC4200CDDBC5 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02954D041DB4CC4200CDDBC5 /* PhoneViewController.swift */; };
 		02954D071DB4CCAB00CDDBC5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02954D061DB4CCAB00CDDBC5 /* UIView.swift */; };
 		029CF7741DB6D7CD00987FB7 /* SelectContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF7731DB6D7CD00987FB7 /* SelectContactViewController.swift */; };
 		029CF7771DB6E40000987FB7 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029CF7761DB6E3FA00987FB7 /* WorkSans-Regular.ttf */; };
 		029CF7791DB6E50200987FB7 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029CF7781DB6E4FD00987FB7 /* WorkSans-Bold.ttf */; };
 		029CF77D1DB6F2F100987FB7 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029CF77C1DB6F2F100987FB7 /* BubbleTransition.swift */; };
+		02D54A8D1DC1863A004CA031 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D54A8C1DC1863A004CA031 /* SignUp.storyboard */; };
+		02D54A8F1DC1867E004CA031 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D54A8E1DC1867E004CA031 /* Intro.storyboard */; };
 		3E01C1E8710EA9488A72E955 /* Pods_Feels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18F484198C5B6647C250298 /* Pods_Feels.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,6 @@
 		0286854C1DB5B08A0083D53E /* SecondIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondIntroViewController.swift; sourceTree = "<group>"; };
 		02954CDC1DB4564900CDDBC5 /* Feels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02954CDF1DB4564900CDDBC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02954CE11DB4564900CDDBC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02954CE61DB4564900CDDBC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02954CE91DB4564900CDDBC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02954CEB1DB4564900CDDBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,12 +46,13 @@
 		02954CFC1DB4CBEC00CDDBC5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		02954D001DB4CC3100CDDBC5 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		02954D021DB4CC3900CDDBC5 /* GenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
-		02954D041DB4CC4200CDDBC5 /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		02954D061DB4CCAB00CDDBC5 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		029CF7731DB6D7CD00987FB7 /* SelectContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectContactViewController.swift; sourceTree = "<group>"; };
 		029CF7761DB6E3FA00987FB7 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WorkSans-Regular.ttf"; path = "../../../../../Downloads/Work_Sans (1)/WorkSans-Regular.ttf"; sourceTree = "<group>"; };
 		029CF7781DB6E4FD00987FB7 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "WorkSans-Bold.ttf"; path = "../../../../../Downloads/Work_Sans (1)/WorkSans-Bold.ttf"; sourceTree = "<group>"; };
 		029CF77C1DB6F2F100987FB7 /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
+		02D54A8C1DC1863A004CA031 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		02D54A8E1DC1867E004CA031 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		2555778081197084565D39A0 /* Pods-Feels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.debug.xcconfig"; sourceTree = "<group>"; };
 		BAF5E5B7F9F68B51FC104314 /* Pods-Feels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.release.xcconfig"; sourceTree = "<group>"; };
 		D18F484198C5B6647C250298 /* Pods_Feels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +102,6 @@
 				023719B01DBD674C00EEB12E /* services */,
 				029CF7751DB6E3EB00987FB7 /* font */,
 				02954CFF1DB4CC1800CDDBC5 /* controllers */,
-				02954CFE1DB4CBF400CDDBC5 /* storyboards */,
 				02954CDF1DB4564900CDDBC5 /* AppDelegate.swift */,
 				02954CE61DB4564900CDDBC5 /* Assets.xcassets */,
 				02954CEB1DB4564900CDDBC5 /* Info.plist */,
@@ -113,28 +112,13 @@
 			path = Feels;
 			sourceTree = "<group>";
 		};
-		02954CFE1DB4CBF400CDDBC5 /* storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				02954CFC1DB4CBEC00CDDBC5 /* Main.storyboard */,
-				02954CE81DB4564900CDDBC5 /* LaunchScreen.storyboard */,
-			);
-			name = storyboards;
-			sourceTree = "<group>";
-		};
 		02954CFF1DB4CC1800CDDBC5 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				02954CE11DB4564900CDDBC5 /* ViewController.swift */,
-				02954CF21DB4CA9100CDDBC5 /* SendViewController.swift */,
-				02954D001DB4CC3100CDDBC5 /* NameViewController.swift */,
-				02954D021DB4CC3900CDDBC5 /* GenderViewController.swift */,
-				02954D041DB4CC4200CDDBC5 /* PhoneViewController.swift */,
-				020BDE651DB4D71500D40D14 /* ContactViewController.swift */,
-				028685461DB5A89F0083D53E /* IntroViewController.swift */,
-				0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */,
-				0286854C1DB5B08A0083D53E /* SecondIntroViewController.swift */,
-				029CF7731DB6D7CD00987FB7 /* SelectContactViewController.swift */,
+				02D54A931DC18884004CA031 /* launch screen */,
+				02D54A921DC1887D004CA031 /* intro */,
+				02D54A911DC18878004CA031 /* main */,
+				02D54A901DC1886F004CA031 /* sign up */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -146,6 +130,46 @@
 				029CF7761DB6E3FA00987FB7 /* WorkSans-Regular.ttf */,
 			);
 			name = font;
+			sourceTree = "<group>";
+		};
+		02D54A901DC1886F004CA031 /* sign up */ = {
+			isa = PBXGroup;
+			children = (
+				02954D021DB4CC3900CDDBC5 /* GenderViewController.swift */,
+				02954D001DB4CC3100CDDBC5 /* NameViewController.swift */,
+				02D54A8C1DC1863A004CA031 /* SignUp.storyboard */,
+			);
+			name = "sign up";
+			sourceTree = "<group>";
+		};
+		02D54A911DC18878004CA031 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				020BDE651DB4D71500D40D14 /* ContactViewController.swift */,
+				02954CF21DB4CA9100CDDBC5 /* SendViewController.swift */,
+				029CF7731DB6D7CD00987FB7 /* SelectContactViewController.swift */,
+				02954CFC1DB4CBEC00CDDBC5 /* Main.storyboard */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		02D54A921DC1887D004CA031 /* intro */ = {
+			isa = PBXGroup;
+			children = (
+				028685461DB5A89F0083D53E /* IntroViewController.swift */,
+				0286854C1DB5B08A0083D53E /* SecondIntroViewController.swift */,
+				0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */,
+				02D54A8E1DC1867E004CA031 /* Intro.storyboard */,
+			);
+			name = intro;
+			sourceTree = "<group>";
+		};
+		02D54A931DC18884004CA031 /* launch screen */ = {
+			isa = PBXGroup;
+			children = (
+				02954CE81DB4564900CDDBC5 /* LaunchScreen.storyboard */,
+			);
+			name = "launch screen";
 			sourceTree = "<group>";
 		};
 		1E89DD7AEF346EBD7C269AD1 /* Frameworks */ = {
@@ -232,8 +256,10 @@
 			files = (
 				02954CFD1DB4CBEC00CDDBC5 /* Main.storyboard in Resources */,
 				02954CEA1DB4564900CDDBC5 /* LaunchScreen.storyboard in Resources */,
+				02D54A8D1DC1863A004CA031 /* SignUp.storyboard in Resources */,
 				02954CE71DB4564900CDDBC5 /* Assets.xcassets in Resources */,
 				029CF7771DB6E40000987FB7 /* WorkSans-Regular.ttf in Resources */,
+				02D54A8F1DC1867E004CA031 /* Intro.storyboard in Resources */,
 				029CF7791DB6E50200987FB7 /* WorkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				028685471DB5A89F0083D53E /* IntroViewController.swift in Sources */,
-				02954CE21DB4564900CDDBC5 /* ViewController.swift in Sources */,
 				020BDE661DB4D71500D40D14 /* ContactViewController.swift in Sources */,
 				02954D031DB4CC3900CDDBC5 /* GenderViewController.swift in Sources */,
 				029CF77D1DB6F2F100987FB7 /* BubbleTransition.swift in Sources */,
@@ -318,7 +343,6 @@
 				02954CE01DB4564900CDDBC5 /* AppDelegate.swift in Sources */,
 				028685491DB5ADA00083D53E /* Constants.swift in Sources */,
 				02954D071DB4CCAB00CDDBC5 /* UIView.swift in Sources */,
-				02954D051DB4CC4200CDDBC5 /* PhoneViewController.swift in Sources */,
 				02954CF31DB4CA9100CDDBC5 /* SendViewController.swift in Sources */,
 				02954D011DB4CC3100CDDBC5 /* NameViewController.swift in Sources */,
 			);

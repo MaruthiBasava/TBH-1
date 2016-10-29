@@ -30,6 +30,8 @@
 		02D54A971DC2DC3A004CA031 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D54A961DC2DC3A004CA031 /* MessageService.swift */; };
 		02D54A9B1DC474AC004CA031 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D54A9A1DC474AC004CA031 /* MainTabBarViewController.swift */; };
 		02EE78F01DC4FC8300744682 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78EF1DC4FC8300744682 /* NotificationsViewController.swift */; };
+		02EE78F31DC5137500744682 /* MutualMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F21DC5137500744682 /* MutualMessageModel.swift */; };
+		02EE78F51DC5138900744682 /* AnonymousMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F41DC5138900744682 /* AnonymousMessageModel.swift */; };
 		3E01C1E8710EA9488A72E955 /* Pods_Feels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18F484198C5B6647C250298 /* Pods_Feels.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		02D54A961DC2DC3A004CA031 /* MessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		02D54A9A1DC474AC004CA031 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		02EE78EF1DC4FC8300744682 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		02EE78F21DC5137500744682 /* MutualMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutualMessageModel.swift; sourceTree = "<group>"; };
+		02EE78F41DC5138900744682 /* AnonymousMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousMessageModel.swift; sourceTree = "<group>"; };
 		2555778081197084565D39A0 /* Pods-Feels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.debug.xcconfig"; sourceTree = "<group>"; };
 		BAF5E5B7F9F68B51FC104314 /* Pods-Feels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.release.xcconfig"; sourceTree = "<group>"; };
 		D18F484198C5B6647C250298 /* Pods_Feels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,7 @@
 			children = (
 				029CF7751DB6E3EB00987FB7 /* font */,
 				02954CFF1DB4CC1800CDDBC5 /* controllers */,
+				02EE78F11DC5134300744682 /* models */,
 				023719B01DBD674C00EEB12E /* services */,
 				02954CDF1DB4564900CDDBC5 /* AppDelegate.swift */,
 				02954CE61DB4564900CDDBC5 /* Assets.xcassets */,
@@ -179,6 +184,15 @@
 				02954CE81DB4564900CDDBC5 /* LaunchScreen.storyboard */,
 			);
 			name = "launch screen";
+			sourceTree = "<group>";
+		};
+		02EE78F11DC5134300744682 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				02EE78F21DC5137500744682 /* MutualMessageModel.swift */,
+				02EE78F41DC5138900744682 /* AnonymousMessageModel.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 		1E89DD7AEF346EBD7C269AD1 /* Frameworks */ = {
@@ -348,6 +362,7 @@
 				029CF77D1DB6F2F100987FB7 /* BubbleTransition.swift in Sources */,
 				0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */,
 				029CF7741DB6D7CD00987FB7 /* SelectContactViewController.swift in Sources */,
+				02EE78F51DC5138900744682 /* AnonymousMessageModel.swift in Sources */,
 				0286854D1DB5B08A0083D53E /* SecondIntroViewController.swift in Sources */,
 				02D54A971DC2DC3A004CA031 /* MessageService.swift in Sources */,
 				02954CE01DB4564900CDDBC5 /* AppDelegate.swift in Sources */,
@@ -355,6 +370,7 @@
 				02954D071DB4CCAB00CDDBC5 /* UIView.swift in Sources */,
 				02954CF31DB4CA9100CDDBC5 /* SendViewController.swift in Sources */,
 				02954D011DB4CC3100CDDBC5 /* NameViewController.swift in Sources */,
+				02EE78F31DC5137500744682 /* MutualMessageModel.swift in Sources */,
 				02D54A951DC18D82004CA031 /* AuthenticationService.swift in Sources */,
 				02EE78F01DC4FC8300744682 /* NotificationsViewController.swift in Sources */,
 			);

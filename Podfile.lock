@@ -3,6 +3,7 @@ PODS:
   - AlamofireObjectMapper (4.0.0):
     - Alamofire (~> 4.0)
     - ObjectMapper (~> 2.0)
+  - DGElasticPullToRefresh (1.1)
   - Digits (2.2.0):
     - TwitterCore (= 2.2.0)
   - Fabric (1.6.7)
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireObjectMapper (~> 4.0)
+  - DGElasticPullToRefresh
   - Digits
   - Fabric
   - Locksmith
@@ -24,6 +26,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   AlamofireObjectMapper: 9faa3ce5a240efda1b209009a2d6e1e949227abc
+  DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
   Digits: 335c479574eb2bbc50be326c1daf505b68d87135
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
@@ -31,6 +34,6 @@ SPEC CHECKSUMS:
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   TwitterCore: 115527630bb2986954adc928b8c895a92bcd57e5
 
-PODFILE CHECKSUM: 799d8358156ab672145503e51604d3cd83f0e0b0
+PODFILE CHECKSUM: 29e122b0e8f107ecf8d26d34ffd4f3dd6240283d
 
 COCOAPODS: 1.1.1

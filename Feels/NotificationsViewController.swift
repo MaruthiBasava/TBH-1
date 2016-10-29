@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DGElasticPullToRefresh
 
 class NotificationCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
@@ -30,6 +31,15 @@ class NotificationsViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
+        
+        // Initialize tableView
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor.white
+        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            self?.tableView.dg_stopLoading()
+            }, loadingView: loadingView)
+        tableView.dg_setPullToRefreshFillColor(UIColor.basavaRed())
+        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
         
         segmentedControl.layer.cornerRadius = 15.0;
         segmentedControl.layer.borderColor = UIColor.basavaRed().cgColor

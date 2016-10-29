@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageControlAppearance.pageIndicatorTintColor = UIColor.basavaRed().withAlphaComponent(0.75)
         pageControlAppearance.currentPageIndicatorTintColor = UIColor.basavaRed()
         
+        UITabBar.appearance().tintColor = UIColor.basavaRed()
         
         let authService = AuthService()
         

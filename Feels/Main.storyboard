@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yxg-1X-hsh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BMM-Jz-jJF">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,11 +9,51 @@
         <array key="WorkSans-Bold.ttf">
             <string>WorkSans-Bold</string>
         </array>
-        <array key="WorkSans-Regular.ttf">
-            <string>WorkSans-Regular</string>
-        </array>
     </customFonts>
     <scenes>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="UdZ-Zb-P8f">
+            <objects>
+                <tabBarController id="BMM-Jz-jJF" customClass="MainTabBarViewController" customModule="Feels" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9vN-e8-1It">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Yxg-1X-hsh" kind="relationship" relationship="viewControllers" id="gQN-Kr-eBH"/>
+                        <segue destination="vOe-SV-hWv" kind="relationship" relationship="viewControllers" id="3eP-W5-eVT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4y-jE-cuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="-57"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a9T-gn-S4J">
+            <objects>
+                <viewController id="vOe-SV-hWv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NWv-Me-l5Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="xOT-su-lBY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2FL-EJ-gWO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.90916049480438232" green="0.13427700102329254" blue="0.27994856238365173" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="notification" selectedImage="notication filled" id="Y0w-1y-bql"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcd-uc-Z3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="266"/>
+        </scene>
         <!--Select Contact View Controller-->
         <scene sceneID="5nh-3K-rib">
             <objects>
@@ -64,64 +103,30 @@
                                     <segue destination="j35-p9-sgF" kind="show" id="5Jv-3G-KOL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXJ-EQ-1Au">
-                                <color key="backgroundColor" red="0.21568627450980393" green="0.15294117647058825" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="O8W-6t-R3x"/>
-                                    <constraint firstAttribute="width" constant="206" id="zCR-oj-nQL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="18"/>
-                                <state key="normal" title="you have no tbh's">
-                                    <color key="titleColor" red="0.33725490196078434" green="0.81176470588235294" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ww9-5k-eaP" kind="show" id="LkP-1p-akg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Srv-0V-sR5" firstAttribute="centerX" secondItem="fbX-bZ-01x" secondAttribute="centerX" constant="1" id="5QN-V9-hSi"/>
-                            <constraint firstItem="PR0-iE-CBN" firstAttribute="top" secondItem="1Yw-fY-gyA" secondAttribute="bottom" constant="266" id="5kL-0M-phH"/>
+                            <constraint firstItem="PR0-iE-CBN" firstAttribute="top" secondItem="1Yw-fY-gyA" secondAttribute="bottom" constant="208" id="5kL-0M-phH"/>
                             <constraint firstItem="Srv-0V-sR5" firstAttribute="leading" secondItem="61n-Mt-VTY" secondAttribute="leadingMargin" constant="60" id="PJn-0b-dnh"/>
                             <constraint firstItem="PR0-iE-CBN" firstAttribute="centerX" secondItem="Srv-0V-sR5" secondAttribute="centerX" id="PQe-rY-0h0"/>
                             <constraint firstItem="PR0-iE-CBN" firstAttribute="trailing" secondItem="61n-Mt-VTY" secondAttribute="trailingMargin" id="bPY-h6-9Nh"/>
-                            <constraint firstItem="gXJ-EQ-1Au" firstAttribute="top" secondItem="1Yw-fY-gyA" secondAttribute="bottom" constant="8" symbolic="YES" id="dm4-5l-fG8"/>
-                            <constraint firstItem="gXJ-EQ-1Au" firstAttribute="trailing" secondItem="PR0-iE-CBN" secondAttribute="trailing" id="mIs-Xw-Jjf"/>
                             <constraint firstItem="PR0-iE-CBN" firstAttribute="leading" secondItem="61n-Mt-VTY" secondAttribute="leadingMargin" id="voY-dH-7ag"/>
-                            <constraint firstItem="d8e-5S-syJ" firstAttribute="top" secondItem="fbX-bZ-01x" secondAttribute="bottom" constant="122" id="w8r-nf-OdZ"/>
+                            <constraint firstItem="d8e-5S-syJ" firstAttribute="top" secondItem="fbX-bZ-01x" secondAttribute="bottom" constant="180" id="w8r-nf-OdZ"/>
                             <constraint firstItem="Srv-0V-sR5" firstAttribute="top" secondItem="PR0-iE-CBN" secondAttribute="bottom" constant="8" symbolic="YES" id="wEE-nV-NlU"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="message" selectedImage="message filled" id="TWX-6J-K8r"/>
                     <connections>
                         <outlet property="messagesTableView" destination="pXn-hV-51R" id="82h-xv-n9L"/>
                         <outlet property="nextButton" destination="fbX-bZ-01x" id="e66-lV-0D2"/>
-                        <outlet property="numberOfNotifsLabel" destination="gXJ-EQ-1Au" id="YcX-nj-ed0"/>
                         <outlet property="selectButton" destination="Srv-0V-sR5" id="2z0-Ob-Nh7"/>
                         <outlet property="sendButton" destination="cEw-R9-gob" id="aB2-Pq-NFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GvW-qZ-0St" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="110"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="LWS-8d-Uuf">
-            <objects>
-                <viewController id="ww9-5k-eaP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gnt-g5-QZc"/>
-                        <viewControllerLayoutGuide type="bottom" id="XL4-RR-vbd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HP2-Cn-cKN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jtr-Ip-YEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3220" y="-233"/>
+            <point key="canvasLocation" x="1375" y="-509"/>
         </scene>
         <!--Send View Controller-->
         <scene sceneID="Tug-MM-mMb">
@@ -224,7 +229,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vd2-Vf-PBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3220" y="464"/>
+            <point key="canvasLocation" x="2388" y="-493"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="message" width="30" height="30"/>
+        <image name="message filled" width="30" height="30"/>
+        <image name="notication filled" width="30" height="30"/>
+        <image name="notification" width="30" height="30"/>
+    </resources>
 </document>

@@ -19,9 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Digits.self])
-
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         
         let pageControlAppearance = UIPageControl.appearance()
         pageControlAppearance.pageIndicatorTintColor = UIColor.basavaRed().withAlphaComponent(0.75)

@@ -88,10 +88,22 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY4-z5-dTv">
+                                <color key="barTintColor" red="0.90916049480438232" green="0.13427700102329254" blue="0.27994856238365173" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Notifications" id="8CQ-lb-PpZ"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6v-CE-KF8">
+                                <color key="backgroundColor" red="0.90916049480438232" green="0.13427700102329254" blue="0.27994856238365173" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WeE-J5-ez4">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="UTw-v3-hpy"/>
+                                    <constraint firstAttribute="height" constant="48" id="3T5-2q-W1U"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Your Matches"/>
@@ -105,13 +117,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="WeE-J5-ez4" firstAttribute="leading" secondItem="O9n-QJ-rqF" secondAttribute="leadingMargin" constant="-8" id="2uU-zj-aSX"/>
-                            <constraint firstItem="beN-xW-3DO" firstAttribute="leading" secondItem="O9n-QJ-rqF" secondAttribute="leading" id="DOj-un-JLz"/>
-                            <constraint firstAttribute="trailing" secondItem="beN-xW-3DO" secondAttribute="trailing" id="GPy-qb-0CL"/>
-                            <constraint firstItem="beN-xW-3DO" firstAttribute="top" secondItem="WeE-J5-ez4" secondAttribute="bottom" constant="8" symbolic="YES" id="P6T-hK-xNq"/>
-                            <constraint firstItem="WeE-J5-ez4" firstAttribute="centerX" secondItem="beN-xW-3DO" secondAttribute="centerX" id="XVf-Ei-NBv"/>
-                            <constraint firstItem="WeE-J5-ez4" firstAttribute="top" secondItem="42J-va-yx6" secondAttribute="bottom" constant="8" symbolic="YES" id="ekv-pj-Q7w"/>
-                            <constraint firstItem="beN-xW-3DO" firstAttribute="bottom" secondItem="e5G-gK-q2V" secondAttribute="top" id="pB2-ee-5np"/>
+                            <constraint firstItem="WeE-J5-ez4" firstAttribute="top" secondItem="kY4-z5-dTv" secondAttribute="bottom" constant="8" id="19q-z2-fFB"/>
+                            <constraint firstItem="t6v-CE-KF8" firstAttribute="leading" secondItem="kY4-z5-dTv" secondAttribute="leading" id="3wM-oh-cn1"/>
+                            <constraint firstItem="kY4-z5-dTv" firstAttribute="centerX" secondItem="WeE-J5-ez4" secondAttribute="centerX" id="4gY-fu-dli"/>
+                            <constraint firstItem="kY4-z5-dTv" firstAttribute="leading" secondItem="O9n-QJ-rqF" secondAttribute="leading" id="4iu-kI-B7u"/>
+                            <constraint firstItem="WeE-J5-ez4" firstAttribute="leading" secondItem="O9n-QJ-rqF" secondAttribute="leadingMargin" constant="-8" id="8aP-zb-fGf"/>
+                            <constraint firstItem="beN-xW-3DO" firstAttribute="top" secondItem="WeE-J5-ez4" secondAttribute="bottom" constant="8" symbolic="YES" id="IdU-JJ-tjd"/>
+                            <constraint firstItem="t6v-CE-KF8" firstAttribute="trailing" secondItem="kY4-z5-dTv" secondAttribute="trailing" id="Rk8-Fu-L1F"/>
+                            <constraint firstItem="t6v-CE-KF8" firstAttribute="top" secondItem="O9n-QJ-rqF" secondAttribute="top" id="XOF-zy-SI7"/>
+                            <constraint firstAttribute="trailing" secondItem="kY4-z5-dTv" secondAttribute="trailing" id="doH-kf-jtL"/>
+                            <constraint firstItem="t6v-CE-KF8" firstAttribute="bottom" secondItem="kY4-z5-dTv" secondAttribute="top" id="jiF-tW-mOM"/>
+                            <constraint firstItem="kY4-z5-dTv" firstAttribute="top" secondItem="42J-va-yx6" secondAttribute="bottom" constant="8" id="le3-5N-97u"/>
+                            <constraint firstItem="kY4-z5-dTv" firstAttribute="leading" secondItem="beN-xW-3DO" secondAttribute="leading" id="mFF-5o-ev0"/>
+                            <constraint firstItem="beN-xW-3DO" firstAttribute="bottom" secondItem="e5G-gK-q2V" secondAttribute="top" id="mii-eu-CJv"/>
+                            <constraint firstItem="kY4-z5-dTv" firstAttribute="trailing" secondItem="beN-xW-3DO" secondAttribute="trailing" id="vdz-Ad-gxB"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="notification" selectedImage="notication filled" id="Qkj-5H-Uar"/>
@@ -150,7 +169,7 @@
                                     <constraint firstAttribute="height" constant="46" id="PUc-D1-bsT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="17"/>
-                                <state key="normal" title="SELECT">
+                                <state key="normal" title="choose">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

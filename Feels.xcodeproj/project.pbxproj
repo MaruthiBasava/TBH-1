@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		020BDE661DB4D71500D40D14 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020BDE651DB4D71500D40D14 /* ContactViewController.swift */; };
 		028685471DB5A89F0083D53E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028685461DB5A89F0083D53E /* IntroViewController.swift */; };
 		028685491DB5ADA00083D53E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028685481DB5ADA00083D53E /* Constants.swift */; };
 		0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		020BDE651DB4D71500D40D14 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		028685461DB5A89F0083D53E /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		028685481DB5ADA00083D53E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 		02D54A911DC18878004CA031 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				020BDE651DB4D71500D40D14 /* ContactViewController.swift */,
 				02954CF21DB4CA9100CDDBC5 /* SendViewController.swift */,
 				029CF7731DB6D7CD00987FB7 /* SelectContactViewController.swift */,
 				02D54A9A1DC474AC004CA031 /* MainTabBarViewController.swift */,
@@ -360,7 +357,6 @@
 			files = (
 				02D54A9B1DC474AC004CA031 /* MainTabBarViewController.swift in Sources */,
 				028685471DB5A89F0083D53E /* IntroViewController.swift in Sources */,
-				020BDE661DB4D71500D40D14 /* ContactViewController.swift in Sources */,
 				02954D031DB4CC3900CDDBC5 /* GenderViewController.swift in Sources */,
 				029CF77D1DB6F2F100987FB7 /* BubbleTransition.swift in Sources */,
 				0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */,

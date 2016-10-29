@@ -32,6 +32,7 @@ class AuthResponse: Mappable {
 }
 
 class AuthService: AuthenticationService {
+    private let phoneNumberKey = "phoneNumberKey"
     private let jwtTokenKey = "jwtTokenKey"
     private let locksmithAccount = "tbhaccount"
     private let loginEndpoint = "http://192.168.1.248:8000/auth"

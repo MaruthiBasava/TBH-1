@@ -19,6 +19,10 @@ class SendViewController: UIViewController {
     @IBOutlet weak var messagesTableView: UITableView!
     @IBOutlet weak var selectButton: UIButton!
     
+    var recipientPhoneNumber: String!
+    
+    var selectedMessage: PresetMessageModel?
+    
     let messageService = MessageService()
     let diposeBag = DisposeBag()
     
@@ -54,6 +58,17 @@ class SendViewController: UIViewController {
     }
     
     @IBAction func send(_ sender: UIButton) {
+        let messageCode = selectedMessage?.code
+        let phoneNumber = recipientPhoneNumber
+        messageService.sendMessageTo(messageCode: messageCode, phoneNumber: phoneNumber)
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { success in
+                self.dismiss(animated: true)
+                print("sent")
+            }, onError: { error in
+                print(error)
+            }).addDisposableTo(diposeBag)
     }
 }
 
@@ -78,4 +93,13 @@ extension SendViewController: UITableViewDataSource {
 
 extension SendViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = items[indexPath.row]
+        
+        for message in items {
+            if message.message == selectedItem.message {
+                self.selectedMessage = message
+            }
+        }
+    }
 }

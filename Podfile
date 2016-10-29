@@ -12,4 +12,5 @@ target 'Feels' do
   pod 'Locksmith'
   pod 'Alamofire', '~> 4.0'
   pod 'RxSwift', '~> 3.0'
+  pod 'AlamofireObjectMapper', '~> 4.0'
 end

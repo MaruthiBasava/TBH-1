@@ -29,9 +29,15 @@ class SecondIntroViewController: UIViewController {
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { success in
-                print(success)
+               self.goToMainApp()
             }, onError: { error in
                 print(error)
             }).addDisposableTo(disposeBag)
+    }
+    
+    private func goToMainApp() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController()
+        present(viewController!, animated: true)
     }
 }

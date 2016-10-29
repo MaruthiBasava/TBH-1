@@ -11,22 +11,36 @@ import DigitsKit
 import Locksmith
 import Alamofire
 import RxSwift
+import AlamofireObjectMapper
+import ObjectMapper
 
 protocol AuthenticationService {
     func isAuthenticated() -> Bool
-    func authenticate() -> Observable<Bool>
+    func authenticate() -> Observable<Void>
+}
+
+class AuthResponse: Mappable {
+    var token: String = ""
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        token <- map["token"]
+    }
 }
 
 class AuthService: AuthenticationService {
     let jwtTokenKey = "jwtTokenKey"
-    let locksmithAccount = "tbh"
-    let loginEndpoint = ""
+    let locksmithAccount = "tbhaccount"
+    let loginEndpoint = "http://192.168.1.248:8000/auth"
     
     func isAuthenticated() -> Bool {
         return Locksmith.loadDataForUserAccount(userAccount: locksmithAccount) != nil
     }
     
-    func authenticate() -> Observable<Bool> {
+    func authenticate() -> Observable<Void> {
         return Observable.create({ observer -> Disposable in
             let digits = Digits.sharedInstance()
             digits.authenticate { (session, error) in
@@ -46,14 +60,32 @@ class AuthService: AuthenticationService {
                     print("\n")
                     print(provider)
                     
-                    let params = ["":""]
-                    Alamofire.request(self.loginEndpoint, method: .post, parameters: params)
-                        .responseJSON(completionHandler: { response in
-                            print(response.data)
-                        })
+                    var headers: [String:String] = [:]
+                    headers["Content-Type"] = "application/json"
+                    headers["X-Verify-Credentials-Authorization"] = auth as? String ?? ""
+                    headers["X-Auth-Service-Provider"] = provider as? String ?? ""
                     
-                    observer.onNext(true)
-                    observer.onCompleted()
+                    Alamofire.request(self.loginEndpoint, method: .post, headers: headers)
+                        .validate(statusCode: 200..<300)
+                        .responseObject { (response: DataResponse<AuthResponse>) in
+                            switch response.result {
+                            case .success:
+                                let token = response.result.value?.token
+                                
+                                let d: [String: String] = [self.jwtTokenKey: token!]
+                                
+                                try? Locksmith.saveData(data: d, forUserAccount: self.locksmithAccount)
+                                
+                                observer.onNext()
+                                observer.onCompleted()
+                                break
+                            case .failure(let error):
+                                print(error)
+                                observer.onError(error)
+                                observer.onCompleted()
+                                break
+                            }
+                        }
                 }
             }
             

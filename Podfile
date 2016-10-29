@@ -9,4 +9,7 @@ target 'Feels' do
   pod 'Fabric'
   pod 'Digits'
   pod 'TwitterCore'
+  pod 'Locksmith'
+  pod 'Alamofire', '~> 4.0'
+  pod 'RxSwift', '~> 3.0'
 end

@@ -1,20 +1,29 @@
 PODS:
+  - Alamofire (4.0.1)
   - Digits (2.2.0):
     - TwitterCore (= 2.2.0)
   - Fabric (1.6.7)
+  - Locksmith (3.0.0)
+  - RxSwift (3.0.0)
   - TwitterCore (2.2.0):
     - Fabric
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - Digits
   - Fabric
+  - Locksmith
+  - RxSwift (~> 3.0)
   - TwitterCore
 
 SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Digits: 335c479574eb2bbc50be326c1daf505b68d87135
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
+  RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   TwitterCore: 115527630bb2986954adc928b8c895a92bcd57e5
 
-PODFILE CHECKSUM: d73533dd0291604e48c291dda75a8443d453a41f
+PODFILE CHECKSUM: f49367c05409e88c1fab53598eec998133965cb4
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.1.1

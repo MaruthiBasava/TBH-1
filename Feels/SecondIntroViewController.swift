@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class SecondIntroViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
-    let digitsService = DigitsService()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,14 @@ class SecondIntroViewController: UIViewController {
     }
     
     @IBAction func signUp(_ sender: UIButton) {
-        digitsService.signup()
+        let service = AuthService()
+        service.authenticate()
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { success in
+                print(success)
+            }, onError: { error in
+                print(error)
+            }).addDisposableTo(disposeBag)
     }
 }

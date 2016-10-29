@@ -9,6 +9,7 @@
 import UIKit
 import Fabric
 import DigitsKit
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let pageControlAppearance = UIPageControl.appearance()
         pageControlAppearance.pageIndicatorTintColor = UIColor.basavaRed().withAlphaComponent(0.75)
         pageControlAppearance.currentPageIndicatorTintColor = UIColor.basavaRed()
+        
+        
+        let authService = AuthService()
+        
+        if authService.isAuthenticated() {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainViewController = mainStoryboard.instantiateInitialViewController()
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = mainViewController
+            self.window?.makeKeyAndVisible()
+        }
+        else {
+            let introStoryboard = UIStoryboard(name: "Intro", bundle: nil)
+            let introViewController = introStoryboard.instantiateInitialViewController()
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = introViewController
+            self.window?.makeKeyAndVisible()
+        }
         
         return true
     }

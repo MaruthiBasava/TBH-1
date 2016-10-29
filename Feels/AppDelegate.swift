@@ -48,6 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         }
         
+        let attr = [NSFontAttributeName: UIFont(name: "WorkSans-Regular", size: 17.0)!]
+        UISegmentedControl.appearance().setTitleTextAttributes(attr, for: .normal)
+        
         return true
     }
 

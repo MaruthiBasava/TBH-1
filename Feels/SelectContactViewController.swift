@@ -16,9 +16,13 @@ class SelectContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectButton.makeRounded()
-        nextButton.layer.cornerRadius = 20
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        nextButton.layer.cornerRadius = nextButton.frame.size.width / 2
+        nextButton.clipsToBounds = true
+    }
+    
     @IBAction func next(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let sendViewController = storyboard.instantiateViewController(withIdentifier: "select_message_vc")

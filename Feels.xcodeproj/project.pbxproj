@@ -29,6 +29,7 @@
 		02D54A951DC18D82004CA031 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D54A941DC18D82004CA031 /* AuthenticationService.swift */; };
 		02D54A971DC2DC3A004CA031 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D54A961DC2DC3A004CA031 /* MessageService.swift */; };
 		02D54A9B1DC474AC004CA031 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D54A9A1DC474AC004CA031 /* MainTabBarViewController.swift */; };
+		02EE78F01DC4FC8300744682 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78EF1DC4FC8300744682 /* NotificationsViewController.swift */; };
 		3E01C1E8710EA9488A72E955 /* Pods_Feels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18F484198C5B6647C250298 /* Pods_Feels.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		02D54A941DC18D82004CA031 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		02D54A961DC2DC3A004CA031 /* MessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		02D54A9A1DC474AC004CA031 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		02EE78EF1DC4FC8300744682 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		2555778081197084565D39A0 /* Pods-Feels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.debug.xcconfig"; sourceTree = "<group>"; };
 		BAF5E5B7F9F68B51FC104314 /* Pods-Feels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.release.xcconfig"; sourceTree = "<group>"; };
 		D18F484198C5B6647C250298 /* Pods_Feels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,8 +155,9 @@
 				020BDE651DB4D71500D40D14 /* ContactViewController.swift */,
 				02954CF21DB4CA9100CDDBC5 /* SendViewController.swift */,
 				029CF7731DB6D7CD00987FB7 /* SelectContactViewController.swift */,
-				02954CFC1DB4CBEC00CDDBC5 /* Main.storyboard */,
 				02D54A9A1DC474AC004CA031 /* MainTabBarViewController.swift */,
+				02EE78EF1DC4FC8300744682 /* NotificationsViewController.swift */,
+				02954CFC1DB4CBEC00CDDBC5 /* Main.storyboard */,
 			);
 			name = main;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				02954CF31DB4CA9100CDDBC5 /* SendViewController.swift in Sources */,
 				02954D011DB4CC3100CDDBC5 /* NameViewController.swift in Sources */,
 				02D54A951DC18D82004CA031 /* AuthenticationService.swift in Sources */,
+				02EE78F01DC4FC8300744682 /* NotificationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

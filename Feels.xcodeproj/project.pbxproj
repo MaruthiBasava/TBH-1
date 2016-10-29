@@ -32,6 +32,7 @@
 		02EE78F01DC4FC8300744682 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78EF1DC4FC8300744682 /* NotificationsViewController.swift */; };
 		02EE78F31DC5137500744682 /* MutualMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F21DC5137500744682 /* MutualMessageModel.swift */; };
 		02EE78F51DC5138900744682 /* AnonymousMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F41DC5138900744682 /* AnonymousMessageModel.swift */; };
+		02EE78F71DC5158600744682 /* PresetMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F61DC5158600744682 /* PresetMessageModel.swift */; };
 		3E01C1E8710EA9488A72E955 /* Pods_Feels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18F484198C5B6647C250298 /* Pods_Feels.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		02EE78EF1DC4FC8300744682 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		02EE78F21DC5137500744682 /* MutualMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutualMessageModel.swift; sourceTree = "<group>"; };
 		02EE78F41DC5138900744682 /* AnonymousMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousMessageModel.swift; sourceTree = "<group>"; };
+		02EE78F61DC5158600744682 /* PresetMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetMessageModel.swift; sourceTree = "<group>"; };
 		2555778081197084565D39A0 /* Pods-Feels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.debug.xcconfig"; sourceTree = "<group>"; };
 		BAF5E5B7F9F68B51FC104314 /* Pods-Feels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feels.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feels/Pods-Feels.release.xcconfig"; sourceTree = "<group>"; };
 		D18F484198C5B6647C250298 /* Pods_Feels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 			children = (
 				02EE78F21DC5137500744682 /* MutualMessageModel.swift */,
 				02EE78F41DC5138900744682 /* AnonymousMessageModel.swift */,
+				02EE78F61DC5158600744682 /* PresetMessageModel.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				02954D031DB4CC3900CDDBC5 /* GenderViewController.swift in Sources */,
 				029CF77D1DB6F2F100987FB7 /* BubbleTransition.swift in Sources */,
 				0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */,
+				02EE78F71DC5158600744682 /* PresetMessageModel.swift in Sources */,
 				029CF7741DB6D7CD00987FB7 /* SelectContactViewController.swift in Sources */,
 				02EE78F51DC5138900744682 /* AnonymousMessageModel.swift in Sources */,
 				0286854D1DB5B08A0083D53E /* SecondIntroViewController.swift in Sources */,

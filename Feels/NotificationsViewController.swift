@@ -58,6 +58,10 @@ class NotificationsViewController: UIViewController {
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         
     }
+    
+    deinit {
+        tableView.dg_removePullToRefresh()
+    }
 }
 
 extension NotificationsViewController: UITableViewDelegate {

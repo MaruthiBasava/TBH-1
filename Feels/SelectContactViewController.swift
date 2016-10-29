@@ -12,7 +12,7 @@ import AddressBookUI
 class SelectContactViewController: UIViewController {
     @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         selectButton.makeRounded()

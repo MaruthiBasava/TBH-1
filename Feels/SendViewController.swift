@@ -8,6 +8,7 @@
 
 import UIKit
 import AddressBookUI
+import RxSwift
 
 class MessageTableViewCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
@@ -18,13 +19,10 @@ class SendViewController: UIViewController {
     @IBOutlet weak var messagesTableView: UITableView!
     @IBOutlet weak var selectButton: UIButton!
     
-    fileprivate let items: [String] = [
-        "We should hang out 👌",
-        "We should start talking again 😎",
-        "Your cute 😍",
-        "Your hilarious 😂",
-        "Your nice 🙂"
-    ]
+    let messageService = MessageService()
+    let diposeBag = DisposeBag()
+    
+    fileprivate var items: [PresetMessageModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +32,17 @@ class SendViewController: UIViewController {
         messagesTableView.dataSource = self
         
         selectButton.makeRounded()
+        
+        messageService.getPossibleMessages()
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { messages in
+                self.items = messages!
+                self.messagesTableView.reloadData()
+            }, onError: { error in
+                print(error)
+            })
+            .addDisposableTo(diposeBag)
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -61,7 +70,7 @@ extension SendViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "message_cell") as! MessageTableViewCell
         
-        cell.messageLabel.text = items[(indexPath as NSIndexPath).row]
+        cell.messageLabel.text = items[(indexPath as NSIndexPath).row].message
         
         return cell
     }

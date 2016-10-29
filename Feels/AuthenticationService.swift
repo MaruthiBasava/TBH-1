@@ -32,12 +32,22 @@ class AuthResponse: Mappable {
 }
 
 class AuthService: AuthenticationService {
-    let jwtTokenKey = "jwtTokenKey"
-    let locksmithAccount = "tbhaccount"
-    let loginEndpoint = "http://192.168.1.248:8000/auth"
+    private let jwtTokenKey = "jwtTokenKey"
+    private let locksmithAccount = "tbhaccount"
+    private let loginEndpoint = "http://192.168.1.248:8000/auth"
+    
+    func getAuthToken() -> String? {
+        let data = Locksmith.loadDataForUserAccount(userAccount: locksmithAccount)
+        
+        if let dict = data {
+            return dict[jwtTokenKey] as! String?
+        }
+        
+        return nil
+    }
     
     func isAuthenticated() -> Bool {
-        return Locksmith.loadDataForUserAccount(userAccount: locksmithAccount) != nil
+        return getAuthToken() != nil
     }
     
     func authenticate() -> Observable<Void> {

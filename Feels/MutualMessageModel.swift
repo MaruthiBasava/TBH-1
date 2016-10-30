@@ -7,7 +7,31 @@
 //
 
 import Foundation
+import ObjectMapper
+import AlamofireObjectMapper
 
-class MutualMessageModel {
+class MutualMessageList: Mappable {
+    var messages: [MutualMessageModel] = []
     
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        messages <- map["messages"]
+    }
+}
+
+class MutualMessageModel: Mappable {
+    var code: Int!
+    var message: String!
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        code <- map["code"]
+        message <- map["message"]
+    }
 }

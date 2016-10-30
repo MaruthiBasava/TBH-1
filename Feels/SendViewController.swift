@@ -44,7 +44,13 @@ class SendViewController: UIViewController {
                 self.items = messages!
                 self.messagesTableView.reloadData()
             }, onError: { error in
-                print(error)
+                if error is SendMessageError {
+                    self.showAlertDialog(title: "Sorry!", message: "You already sent this message.")
+                }
+                else {
+                    print(error)
+                    self.showGenericError()
+                }
             })
             .addDisposableTo(diposeBag)
     }
@@ -58,17 +64,20 @@ class SendViewController: UIViewController {
     }
     
     @IBAction func send(_ sender: UIButton) {
-        let messageCode = selectedMessage?.code
-        let phoneNumber = recipientPhoneNumber
-        messageService.sendMessageTo(messageCode: messageCode, phoneNumber: phoneNumber)
-            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { success in
-                self.dismiss(animated: true)
-                print("sent")
-            }, onError: { error in
-                print(error)
-            }).addDisposableTo(diposeBag)
+        if selectedMessage != nil {
+            let messageCode = selectedMessage?.code
+            let phoneNumber = recipientPhoneNumber
+            messageService.sendMessageTo(messageCode: messageCode, phoneNumber: phoneNumber)
+                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { success in
+                    self.dismiss(animated: true)
+                    print("sent")
+                }, onError: { error in
+                    print(error)
+                    self.showGenericError()
+                }).addDisposableTo(diposeBag)
+        }
     }
 }
 

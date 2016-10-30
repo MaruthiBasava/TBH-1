@@ -8,11 +8,11 @@
 
 import UIKit
 import DGElasticPullToRefresh
+import RxSwift
 
 class NotificationCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    
 }
 
 class NotificationsViewController: UIViewController {
@@ -23,7 +23,9 @@ class NotificationsViewController: UIViewController {
     let receivedIndex = 1
     let notificationCell = "notificationCell"
     
-    var data: [String] = []
+    private let disposeBag = DisposeBag()
+    private var messageService = MessageService()
+    var data: MutualMessageList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class NotificationsViewController: UIViewController {
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
         loadingView.tintColor = UIColor.white
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            self?.loadMessages()
             self?.tableView.dg_stopLoading()
             }, loadingView: loadingView)
         tableView.dg_setPullToRefreshFillColor(UIColor.basavaRed())
@@ -45,12 +48,37 @@ class NotificationsViewController: UIViewController {
         segmentedControl.layer.borderColor = UIColor.basavaRed().cgColor
         segmentedControl.layer.borderWidth = 1.0
         segmentedControl.layer.masksToBounds = true
-        
-        data.append("\"Your cute 😍\"")
-        data.append("\"We should hang out 👌\"")
-        data.append("\"We should start talking again\"")
     }
 
+    private func loadMessages() {
+        if segmentedControl.selectedSegmentIndex == matchesIndex {
+            messageService.getMutualMessages()
+                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { messageList in
+                    self.data = messageList
+                    self.tableView.reloadData()
+                }, onError: { error in
+                    print(error)
+                    self.showGenericError()
+                })
+                .addDisposableTo(disposeBag)
+        }
+        else if segmentedControl.selectedSegmentIndex == receivedIndex {
+            messageService.getReceivedAnonymousMessages()
+                .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { messageList in
+                    self.data = messageList
+                    self.tableView.reloadData()
+                }, onError: { error in
+                    print(error)
+                    self.showGenericError()
+                })
+                .addDisposableTo(disposeBag)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -74,7 +102,7 @@ extension NotificationsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "notification_cell") as! NotificationCell
         
         if segmentedControl.selectedSegmentIndex == matchesIndex {
-            cell.label.text = data[indexPath.row]
+            cell.label.text = data!.messages[indexPath.row].message
         }
         else if segmentedControl.selectedSegmentIndex == receivedIndex {
         
@@ -88,6 +116,10 @@ extension NotificationsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        if data != nil {
+            return data!.messages.count
+        }
+        
+        return 0
     }
 }

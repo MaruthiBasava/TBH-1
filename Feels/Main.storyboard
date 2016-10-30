@@ -187,8 +187,6 @@
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="Yxg-1X-hsh" eventType="touchUpInside" id="OMm-5u-AuY"/>
-                                    <action selector="selectContact:" destination="Yxg-1X-hsh" eventType="touchUpInside" id="f9c-V3-dXE"/>
-                                    <segue destination="j35-p9-sgF" kind="show" id="5Jv-3G-KOL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -226,7 +224,7 @@
                         <viewControllerLayoutGuide type="bottom" id="u7a-u1-sn0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ugv-UC-OLh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEw-R9-gob">

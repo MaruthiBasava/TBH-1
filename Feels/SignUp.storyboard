@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e3n-p3-fS1">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -26,10 +25,10 @@
                         <viewControllerLayoutGuide type="bottom" id="uy2-5G-Cmf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NsD-IM-Rh2">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT IS YOUR NAME?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="phR-DZ-0Pn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="phR-DZ-0Pn">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="Dfp-A2-NAV"/>
                                 </constraints>
@@ -50,14 +49,11 @@
                                     <constraint firstAttribute="height" constant="46" id="NnS-Ec-YNI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="17"/>
-                                <state key="normal" title="NEXT">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="wAB-iG-enq" eventType="touchUpInside" id="jiW-Xf-k3h"/>
-                                    <segue destination="e3n-p3-fS1" kind="show" id="sBH-Bg-NmG">
-                                        <nil key="action"/>
-                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -82,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J4-kj-kr7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266" y="98"/>
+            <point key="canvasLocation" x="385" y="-476"/>
         </scene>
         <!--Gender View Controller-->
         <scene sceneID="kRg-V9-9km">
@@ -93,7 +89,7 @@
                         <viewControllerLayoutGuide type="bottom" id="93m-JI-0C1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="egf-bq-mNE">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-cB-93s">
@@ -102,16 +98,22 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="84"/>
                                 <state key="normal" title="👦🏼"/>
+                                <connections>
+                                    <action selector="selectBoy:" destination="e3n-p3-fS1" eventType="touchUpInside" id="XnV-fq-NH6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvn-dA-XZ1">
                                 <fontDescription key="fontDescription" type="system" pointSize="84"/>
                                 <state key="normal" title="👧🏻"/>
+                                <connections>
+                                    <action selector="selectGirl:" destination="e3n-p3-fS1" eventType="touchUpInside" id="Fhg-Kl-H3N"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GUY OR GIRL?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-9P-sN9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guy or Girl?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="gIu-9P-sN9">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8Ke-Bi-n5q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="24"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.23529411759999999" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -133,31 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSR-bV-nEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="111"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4BB-Lk-DpT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fRi-rm-L8u" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="rw8-nw-ufX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="wAB-iG-enq" kind="relationship" relationship="rootViewController" id="HrF-3g-bg0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eKx-2t-k37" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-711.20000000000005" y="92.203898050974516"/>
+            <point key="canvasLocation" x="353" y="372"/>
         </scene>
     </scenes>
 </document>

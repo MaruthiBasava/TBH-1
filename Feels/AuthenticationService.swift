@@ -16,7 +16,7 @@ import ObjectMapper
 
 protocol AuthenticationService {
     func isAuthenticated() -> Bool
-    func authenticate() -> Observable<Void>
+    func authenticate(genderCode: Int!) -> Observable<Void>
 }
 
 class AuthResponse: Mappable {
@@ -34,8 +34,8 @@ class AuthResponse: Mappable {
 class AuthService: AuthenticationService {
     private let phoneNumberKey = "phoneNumberKey"
     private let jwtTokenKey = "jwtTokenKey"
-    private let locksmithAccount = "tbhaccount"
-    private let loginEndpoint = "http://192.168.1.248:8000/auth"
+    private let locksmithAccount = "tbhacc12"
+    private let loginEndpoint = "http://192.168.1.248:8080/auth"
     
     func getAuthToken() -> String? {
         let data = Locksmith.loadDataForUserAccount(userAccount: locksmithAccount)
@@ -51,7 +51,7 @@ class AuthService: AuthenticationService {
         return getAuthToken() != nil
     }
     
-    func authenticate() -> Observable<Void> {
+    func authenticate(genderCode: Int!) -> Observable<Void> {
         return Observable.create({ observer -> Disposable in
             let digits = Digits.sharedInstance()
             digits.authenticate { (session, error) in
@@ -71,14 +71,25 @@ class AuthService: AuthenticationService {
                     print("\n")
                     print(provider)
                     
-                    var headers: [String:String] = [:]
-                    headers["Content-Type"] = "application/json"
-                    headers["X-Verify-Credentials-Authorization"] = auth as? String ?? ""
-                    headers["X-Auth-Service-Provider"] = provider as? String ?? ""
+                    let headers = [
+                        "Content-Type": "application/json",
+                        "X-Verify-Credentials-Authorization": auth as? String ?? "",
+                        "X-Auth-Service-Provider": provider as? String ?? ""
+                    ]
                     
-                    Alamofire.request(self.loginEndpoint, method: .post, headers: headers)
+                    let params: [String: Any] = [
+                        "gender": genderCode
+                    ]
+                    
+                    print(params)
+                    print(headers)
+                    
+                    Alamofire.request(self.loginEndpoint, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
                         .validate(statusCode: 200..<300)
                         .responseObject { (response: DataResponse<AuthResponse>) in
+                            print(response.request)
+                            print("\n")
+                            print(response.response)
                             switch response.result {
                             case .success:
                                 let token = response.result.value?.token

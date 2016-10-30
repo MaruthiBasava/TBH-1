@@ -13,14 +13,14 @@ class SelectContactViewController: UIViewController {
     @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
 
-    var phoneNumber: String?
+    var phoneNumber: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         selectButton.makeRounded()
     }
-
-    override func viewDidAppear(_ animated: Bool) {
+    
+    override func viewWillAppear(_ animated: Bool) {
         nextButton.layer.cornerRadius = nextButton.frame.size.width / 2
         nextButton.clipsToBounds = true
     }
@@ -33,6 +33,9 @@ class SelectContactViewController: UIViewController {
             sendViewController.recipientPhoneNumber = phoneNumber
         
             present(sendViewController, animated: true)
+        }
+        else {
+            showAlertDialog(title: "Almost There...", message: "Please select who you want to send your TBH to.")
         }
     }
     

@@ -20,7 +20,9 @@ class MessageService {
     private let mutualEndpoint = "http://192.168.1.248:8080/messages?filter=mutual"
     private let presetsEndpoint = "http://192.168.1.248:8080/presets"
     private let sendEndpoint = "http://192.168.1.248:8080/messages"
+    
     private let authService = AuthService()
+    private let contactsService = ContactsService()
     
     func sendMessageTo(messageCode: Int!, phoneNumber: String!) -> Observable<Void> {
         return Observable.create({ observer -> Disposable in
@@ -36,7 +38,6 @@ class MessageService {
                 "message_id": messageCode
             ]
             
-            print(parameters)
             Alamofire.request(self.sendEndpoint, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
                 .validate(statusCode: 201..<300)
                 .response { response in
@@ -145,6 +146,11 @@ class MessageService {
                     case .success:
                         let data = response.result.value!
                         
+                        for message in data.messages {
+                            let contact = self.contactsService.searchForContactUsingPhoneNumber(phoneNumber: message.senderPhoneNumber!)[0]
+                            message.senderName = "\(contact.givenName) \(contact.middleName) \(contact.familyName)"
+                        }
+                        
                         observer.onNext(data)
                         observer.onCompleted()
                         break
@@ -159,5 +165,4 @@ class MessageService {
             return Disposables.create()
         })
     }
-    
 }

@@ -108,7 +108,8 @@ extension NotificationsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "notification_cell") as! NotificationCell
         
         if segmentedControl.selectedSegmentIndex == matchesIndex {
-            cell.nameLabel.text = "Anonymous"
+            let match = matches!.messages[indexPath.row]
+            cell.nameLabel.text = match.sender.name
             cell.label.text = matches!.messages[indexPath.row].message
         }
         else if segmentedControl.selectedSegmentIndex == receivedIndex {

@@ -55,9 +55,10 @@ extension SelectContactViewController: CNContactPickerDelegate {
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         if contact.phoneNumbers.count > 0 {
             phoneNumber = contact.phoneNumbers[0].value.stringValue
+            print(phoneNumber)
         }
         
-        let name = "\(contact.givenName) \(contact.middleName) \(contact.familyName)"
+        let name = "\(contact.givenName) \(contact.familyName)"
         
         self.selectButton.setTitle(name, for: .normal)
     }

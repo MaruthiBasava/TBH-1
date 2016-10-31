@@ -9,6 +9,12 @@ PODS:
   - Fabric (1.6.7)
   - Locksmith (3.0.0)
   - ObjectMapper (2.2.0)
+  - PhoneNumberKit (1.0.1):
+    - PhoneNumberKit/PhoneNumberKitCore (= 1.0.1)
+    - PhoneNumberKit/UIKit (= 1.0.1)
+  - PhoneNumberKit/PhoneNumberKitCore (1.0.1)
+  - PhoneNumberKit/UIKit (1.0.1):
+    - PhoneNumberKit/PhoneNumberKitCore
   - RxSwift (3.0.0)
   - TwitterCore (2.2.0):
     - Fabric
@@ -20,6 +26,7 @@ DEPENDENCIES:
   - Digits
   - Fabric
   - Locksmith
+  - PhoneNumberKit (~> 1.0)
   - RxSwift (~> 3.0)
   - TwitterCore
 
@@ -31,9 +38,10 @@ SPEC CHECKSUMS:
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
   ObjectMapper: 4060d739febae11ab0c6af8d786f98667c82e1bd
+  PhoneNumberKit: 0b5ea9a5454d201656db766343e9d768f8542496
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   TwitterCore: 115527630bb2986954adc928b8c895a92bcd57e5
 
-PODFILE CHECKSUM: 29e122b0e8f107ecf8d26d34ffd4f3dd6240283d
+PODFILE CHECKSUM: 1d8b0e9784ada9d982f5e1326e6f5e7649c15733
 
 COCOAPODS: 1.1.1

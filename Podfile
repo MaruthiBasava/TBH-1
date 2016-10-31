@@ -14,4 +14,5 @@ target 'Feels' do
   pod 'RxSwift', '~> 3.0'
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'DGElasticPullToRefresh'
+  pod 'PhoneNumberKit', '~> 1.0'
 end

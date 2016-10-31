@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import RxSwift
 import Contacts
+import PhoneNumberKit
 
 enum SendMessageError : String, Error {
     case AlreadyExists = "Message already exists"
@@ -147,8 +148,25 @@ class MessageService {
                         let data = response.result.value!
                         
                         for message in data.messages {
-                            let contact = self.contactsService.searchForContactUsingPhoneNumber(phoneNumber: message.senderPhoneNumber!)[0]
-                            message.senderName = "\(contact.givenName) \(contact.middleName) \(contact.familyName)"
+                            let phoneNumber = self.contactsService.normalizePhoneNumber(number: message.sender.phoneNumber)
+                            
+                            if phoneNumber != nil {
+                                let results = self.contactsService.searchForContactUsingPhoneNumber(phoneNumber: phoneNumber!)
+                                print(phoneNumber!)
+                                
+                                if results.count > 0 {
+                                    let contact = results[0]
+                                    message.sender.name = "\(contact.givenName) \(contact.familyName)"
+                                }
+                                else {
+                                    // Couldn't find user in contacts, just use their number for their name
+                                    message.sender.name = message.sender.phoneNumber
+                                }
+                            }
+                            else {
+                                // Couldn't find user in contacts, just use their number for their name
+                                message.sender.name = message.sender.phoneNumber
+                            }
                         }
                         
                         observer.onNext(data)

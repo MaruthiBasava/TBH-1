@@ -9,6 +9,7 @@
 import UIKit
 import DGElasticPullToRefresh
 import RxSwift
+import Contacts
 
 class NotificationCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
@@ -25,7 +26,9 @@ class NotificationsViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     private var messageService = MessageService()
-    var data: MutualMessageList?
+    
+    var matches: MessageList?
+    var received: MessageList?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +42,6 @@ class NotificationsViewController: UIViewController {
         loadingView.tintColor = UIColor.white
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
             self?.loadMessages()
-            self?.tableView.dg_stopLoading()
             }, loadingView: loadingView)
         tableView.dg_setPullToRefreshFillColor(UIColor.basavaRed())
         tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
@@ -56,10 +58,12 @@ class NotificationsViewController: UIViewController {
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
                 .subscribe(onNext: { messageList in
-                    self.data = messageList
+                    self.matches = messageList
                     self.tableView.reloadData()
+                    self.tableView.dg_stopLoading()
                 }, onError: { error in
                     print(error)
+                    self.tableView.dg_stopLoading()
                     self.showGenericError()
                 })
                 .addDisposableTo(disposeBag)
@@ -69,10 +73,12 @@ class NotificationsViewController: UIViewController {
                 .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
                 .observeOn(MainScheduler.instance)
                 .subscribe(onNext: { messageList in
-                    self.data = messageList
+                    self.received = messageList
                     self.tableView.reloadData()
+                    self.tableView.dg_stopLoading()
                 }, onError: { error in
                     print(error)
+                    self.tableView.dg_stopLoading()
                     self.showGenericError()
                 })
                 .addDisposableTo(disposeBag)
@@ -84,7 +90,7 @@ class NotificationsViewController: UIViewController {
     }
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
-        
+        self.tableView.reloadData()
     }
     
     deinit {
@@ -102,10 +108,12 @@ extension NotificationsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "notification_cell") as! NotificationCell
         
         if segmentedControl.selectedSegmentIndex == matchesIndex {
-            cell.label.text = data!.messages[indexPath.row].message
+            cell.nameLabel.text = "Anonymous"
+            cell.label.text = matches!.messages[indexPath.row].message
         }
         else if segmentedControl.selectedSegmentIndex == receivedIndex {
-        
+            cell.nameLabel.text = "Anonymous"
+            cell.label.text = received!.messages[indexPath.row].message
         }
     
         return cell
@@ -116,8 +124,15 @@ extension NotificationsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if data != nil {
-            return data!.messages.count
+        if segmentedControl.selectedSegmentIndex == matchesIndex {
+            if matches != nil {
+                return matches!.messages.count
+            }
+        }
+        else if segmentedControl.selectedSegmentIndex == receivedIndex {
+            if received != nil {
+                return received!.messages.count
+            }
         }
         
         return 0

@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import RxSwift
+import Contacts
 
 enum SendMessageError : String, Error {
     case AlreadyExists = "Message already exists"
@@ -35,6 +36,7 @@ class MessageService {
                 "message_id": messageCode
             ]
             
+            print(parameters)
             Alamofire.request(self.sendEndpoint, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
                 .validate(statusCode: 201..<300)
                 .response { response in
@@ -91,7 +93,7 @@ class MessageService {
         
     }
 
-    func getReceivedAnonymousMessages() -> Observable<MutualMessageList?> {
+    func getReceivedAnonymousMessages() -> Observable<MessageList?> {
         return Observable.create({ observer -> Disposable in
             let headers = [
                 "Content-Type": "application/json",
@@ -100,7 +102,45 @@ class MessageService {
             
             Alamofire.request(self.anonymousEndpoint, method: .get, headers: headers)
                 .validate(statusCode: 200..<300)
-                .responseObject { (response: DataResponse<MutualMessageList>) in
+                .responseObject { (response: DataResponse<MessageList>) in
+                    print(response.response?.allHeaderFields)
+                    print("\n")
+                    switch response.result {
+                    case .success:
+                        let d = String(data: response.data!, encoding: String.Encoding.utf8)
+                        print(d)
+                        let data = response.result.value!
+                        
+                        observer.onNext(data)
+                        observer.onCompleted()
+                        break
+                    case .failure(let error):
+                        
+                        let d = String(data: response.data!, encoding: String.Encoding.utf8)
+                        print(d)
+                        
+                        print(error)
+                        observer.onError(error)
+                        observer.onCompleted()
+                        break
+                    }
+            }
+            
+            return Disposables.create()
+        })
+    }
+    
+    func getMutualMessages() -> Observable<MessageList?> {
+        return Observable.create({ observer -> Disposable in
+            let headers = [
+                "Content-Type": "application/json",
+                "Authorization": "JWT \(self.authService.getAuthToken()!)"
+            ]
+            
+            Alamofire.request(self.mutualEndpoint, method: .get, headers: headers)
+                .validate(statusCode: 200..<300)
+                .responseObject { (response: DataResponse<MessageList>) in
+                    print(response.result.value?.messages)
                     switch response.result {
                     case .success:
                         let data = response.result.value!
@@ -120,32 +160,4 @@ class MessageService {
         })
     }
     
-    func getMutualMessages() -> Observable<MutualMessageList?> {
-        return Observable.create({ observer -> Disposable in
-            let headers = [
-                "Content-Type": "application/json",
-                "Authorization": "JWT \(self.authService.getAuthToken()!)"
-            ]
-            
-            Alamofire.request(self.mutualEndpoint, method: .get, headers: headers)
-                .validate(statusCode: 200..<300)
-                .responseObject { (response: DataResponse<MutualMessageList>) in
-                    switch response.result {
-                    case .success:
-                        let data = response.result.value!
-                        
-                        observer.onNext(data)
-                        observer.onCompleted()
-                        break
-                    case .failure(let error):
-                        print(error)
-                        observer.onError(error)
-                        observer.onCompleted()
-                        break
-                    }
-            }
-            
-            return Disposables.create()
-        })
-    }
 }

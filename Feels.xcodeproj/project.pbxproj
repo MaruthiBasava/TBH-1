@@ -29,7 +29,7 @@
 		02D54A971DC2DC3A004CA031 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D54A961DC2DC3A004CA031 /* MessageService.swift */; };
 		02D54A9B1DC474AC004CA031 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D54A9A1DC474AC004CA031 /* MainTabBarViewController.swift */; };
 		02EE78F01DC4FC8300744682 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78EF1DC4FC8300744682 /* NotificationsViewController.swift */; };
-		02EE78F31DC5137500744682 /* MutualMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F21DC5137500744682 /* MutualMessageModel.swift */; };
+		02EE78F31DC5137500744682 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F21DC5137500744682 /* MessageModel.swift */; };
 		02EE78F51DC5138900744682 /* AnonymousMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F41DC5138900744682 /* AnonymousMessageModel.swift */; };
 		02EE78F71DC5158600744682 /* PresetMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F61DC5158600744682 /* PresetMessageModel.swift */; };
 		02EE78F91DC6A01B00744682 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE78F81DC6A01B00744682 /* ViewController.swift */; };
@@ -62,7 +62,7 @@
 		02D54A961DC2DC3A004CA031 /* MessageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		02D54A9A1DC474AC004CA031 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		02EE78EF1DC4FC8300744682 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
-		02EE78F21DC5137500744682 /* MutualMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutualMessageModel.swift; sourceTree = "<group>"; };
+		02EE78F21DC5137500744682 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		02EE78F41DC5138900744682 /* AnonymousMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonymousMessageModel.swift; sourceTree = "<group>"; };
 		02EE78F61DC5158600744682 /* PresetMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetMessageModel.swift; sourceTree = "<group>"; };
 		02EE78F81DC6A01B00744682 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		02EE78F11DC5134300744682 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				02EE78F21DC5137500744682 /* MutualMessageModel.swift */,
+				02EE78F21DC5137500744682 /* MessageModel.swift */,
 				02EE78F41DC5138900744682 /* AnonymousMessageModel.swift */,
 				02EE78F61DC5158600744682 /* PresetMessageModel.swift */,
 			);
@@ -378,7 +378,7 @@
 				02954D071DB4CCAB00CDDBC5 /* UIView.swift in Sources */,
 				02954CF31DB4CA9100CDDBC5 /* SendViewController.swift in Sources */,
 				02954D011DB4CC3100CDDBC5 /* NameViewController.swift in Sources */,
-				02EE78F31DC5137500744682 /* MutualMessageModel.swift in Sources */,
+				02EE78F31DC5137500744682 /* MessageModel.swift in Sources */,
 				02D54A951DC18D82004CA031 /* AuthenticationService.swift in Sources */,
 				02EE78F01DC4FC8300744682 /* NotificationsViewController.swift in Sources */,
 			);

@@ -34,7 +34,7 @@ class AuthResponse: Mappable {
 class AuthService: AuthenticationService {
     private let phoneNumberKey = "phoneNumberKey"
     private let jwtTokenKey = "jwtTokenKey"
-    private let locksmithAccount = "locksmithacc121"
+    private let locksmithAccount = "locksmithacc1221"
     private let loginEndpoint = "http://192.168.1.248:8080/auth"
     
     func getAuthToken() -> String? {

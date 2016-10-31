@@ -20,4 +20,9 @@ class FirstIntroViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func next(_ sender: UIButton) {
+        let parentVc = parent as! IntroViewController
+        parentVc.setViewControllers([parentVc.pages[1]], direction: UIPageViewControllerNavigationDirection.forward,
+                                    animated: true, completion: nil)
+    }
 }

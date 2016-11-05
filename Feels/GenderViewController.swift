@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import DigitsKit
 
 class GenderViewController: UIViewController {
     private let maleCode = 0
@@ -38,16 +39,26 @@ class GenderViewController: UIViewController {
     
     private func signUpWithPhone(gender: Int!) {
         let service = AuthService()
-        service.authenticate(genderCode: gender)
-            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { success in
-                self.goToMainApp()
-            },
-            onError: { error in
+        let digits = Digits.sharedInstance()
+        digits.authenticate { (session, error) in
+            if error != nil {
                 print(error)
                 self.showGenericError()
-            }).addDisposableTo(disposeBag)
+            }
+            else {
+                service.authenticate(genderCode: gender)
+                    .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                    .observeOn(MainScheduler.instance)
+                    .subscribe(onNext: { success in
+                        print("success")
+                        self.goToMainApp()
+                    },
+                    onError: { error in
+                        print(error)
+                        self.showGenericError()
+                    }).addDisposableTo(self.disposeBag)
+            }
+        }
     }
     
     private func goToMainApp() {

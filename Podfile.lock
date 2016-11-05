@@ -7,8 +7,44 @@ PODS:
   - Digits (2.2.0):
     - TwitterCore (= 2.2.0)
   - Fabric (1.6.7)
+  - Firebase/Core (3.8.0):
+    - FirebaseAnalytics (= 3.5.1)
+    - FirebaseCore (= 3.4.4)
+  - Firebase/Messaging (3.8.0):
+    - Firebase/Core
+    - FirebaseMessaging (= 1.2.1)
+  - FirebaseAnalytics (3.5.1):
+    - FirebaseCore (~> 3.4)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.4.4):
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (1.0.8)
+  - FirebaseMessaging (1.2.1):
+    - FirebaseAnalytics (~> 3.4)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+  - GoogleInterchangeUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleToolboxForMac/Defines (2.1.0)
+  - GoogleToolboxForMac/Logger (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+  - GoogleToolboxForMac/NSData+zlib (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
   - Locksmith (3.0.0)
   - ObjectMapper (2.2.0)
+  - PhoneNumberKit (1.0.1):
+    - PhoneNumberKit/PhoneNumberKitCore (= 1.0.1)
+    - PhoneNumberKit/UIKit (= 1.0.1)
+  - PhoneNumberKit/PhoneNumberKitCore (1.0.1)
+  - PhoneNumberKit/UIKit (1.0.1):
+    - PhoneNumberKit/PhoneNumberKitCore
   - RxSwift (3.0.0)
   - TwitterCore (2.2.0):
     - Fabric
@@ -19,7 +55,10 @@ DEPENDENCIES:
   - DGElasticPullToRefresh
   - Digits
   - Fabric
+  - Firebase/Core
+  - Firebase/Messaging
   - Locksmith
+  - PhoneNumberKit (~> 1.0)
   - RxSwift (~> 3.0)
   - TwitterCore
 
@@ -29,11 +68,20 @@ SPEC CHECKSUMS:
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
   Digits: 335c479574eb2bbc50be326c1daf505b68d87135
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Firebase: fdbecadb7b5cbef2774852d4fa659b9daf11f2af
+  FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
+  FirebaseCore: d0ed25f27b6f9158eccc439f1be6f92e81207e28
+  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
+  FirebaseMessaging: acf66347e43c5637c697060c3001d25c809a4131
+  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
   ObjectMapper: 4060d739febae11ab0c6af8d786f98667c82e1bd
+  PhoneNumberKit: 0b5ea9a5454d201656db766343e9d768f8542496
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   TwitterCore: 115527630bb2986954adc928b8c895a92bcd57e5
 
-PODFILE CHECKSUM: 29e122b0e8f107ecf8d26d34ffd4f3dd6240283d
+PODFILE CHECKSUM: ec2ad7aa4dfe6b690a66d6492e7ab4ee00b52c7d
 
 COCOAPODS: 1.1.1

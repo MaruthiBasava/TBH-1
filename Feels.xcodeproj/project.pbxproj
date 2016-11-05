@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0284B5FF1DCDBACD00BDFEAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0284B5FE1DCDBACD00BDFEAC /* GoogleService-Info.plist */; };
 		028685471DB5A89F0083D53E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028685461DB5A89F0083D53E /* IntroViewController.swift */; };
 		028685491DB5ADA00083D53E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028685481DB5ADA00083D53E /* Constants.swift */; };
 		0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */; };
@@ -36,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0284B5FD1DCDB9D300BDFEAC /* Feels.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Feels.entitlements; sourceTree = "<group>"; };
+		0284B5FE1DCDBACD00BDFEAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		028685461DB5A89F0083D53E /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		028685481DB5ADA00083D53E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 		02954CDE1DB4564900CDDBC5 /* Feels */ = {
 			isa = PBXGroup;
 			children = (
+				0284B5FE1DCDBACD00BDFEAC /* GoogleService-Info.plist */,
+				0284B5FD1DCDB9D300BDFEAC /* Feels.entitlements */,
 				029CF7751DB6E3EB00987FB7 /* font */,
 				02954CFF1DB4CC1800CDDBC5 /* controllers */,
 				02EE78F11DC5134300744682 /* models */,
@@ -259,6 +264,11 @@
 						DevelopmentTeam = HXVX4CH7QY;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -289,6 +299,7 @@
 				02954CEA1DB4564900CDDBC5 /* LaunchScreen.storyboard in Resources */,
 				02D54A8D1DC1863A004CA031 /* SignUp.storyboard in Resources */,
 				02954CE71DB4564900CDDBC5 /* Assets.xcassets in Resources */,
+				0284B5FF1DCDBACD00BDFEAC /* GoogleService-Info.plist in Resources */,
 				029CF7771DB6E40000987FB7 /* WorkSans-Regular.ttf in Resources */,
 				02D54A8F1DC1867E004CA031 /* Intro.storyboard in Resources */,
 				029CF7791DB6E50200987FB7 /* WorkSans-Bold.ttf in Resources */,
@@ -494,12 +505,16 @@
 			baseConfigurationReference = 2555778081197084565D39A0 /* Pods-Feels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Feels/Feels.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HXVX4CH7QY;
 				INFOPLIST_FILE = Feels/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icylabs.Feels;
+				PRODUCT_BUNDLE_IDENTIFIER = io.icylabs.TBH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -509,11 +524,13 @@
 			baseConfigurationReference = BAF5E5B7F9F68B51FC104314 /* Pods-Feels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Feels/Feels.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HXVX4CH7QY;
 				INFOPLIST_FILE = Feels/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icylabs.Feels;
+				PRODUCT_BUNDLE_IDENTIFIER = io.icylabs.TBH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

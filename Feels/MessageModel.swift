@@ -23,10 +23,24 @@ class MessageList: Mappable {
     }
 }
 
+class User: Mappable {
+    var name: String?
+    var phoneNumber: String!
+    var genderCode: Int!
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        phoneNumber <- map["phone_number"]
+        genderCode <- map["gender"]
+    }
+}
+
 class MessageModel: Mappable {
     var message: String!
-    var senderPhoneNumber: String?
-    var senderName: String?
+    var sender: User!
     
     required init?(map: Map) {
         
@@ -34,5 +48,6 @@ class MessageModel: Mappable {
     
     func mapping(map: Map) {
         message <- map["text"]
+        sender <- map["sender"]
     }
 }

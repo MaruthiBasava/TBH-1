@@ -23,7 +23,7 @@ class MessageList: Mappable {
     }
 }
 
-class SendingUser: Mappable {
+class User: Mappable {
     var name: String?
     var phoneNumber: String!
     var genderCode: Int!
@@ -40,7 +40,7 @@ class SendingUser: Mappable {
 
 class MessageModel: Mappable {
     var message: String!
-    var sender: SendingUser!
+    var sender: User!
     
     required init?(map: Map) {
         
@@ -48,6 +48,6 @@ class MessageModel: Mappable {
     
     func mapping(map: Map) {
         message <- map["text"]
-        sender <- map["sending_user"]
+        sender <- map["sender"]
     }
 }

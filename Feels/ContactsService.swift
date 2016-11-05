@@ -12,6 +12,23 @@ import PhoneNumberKit
 
 class ContactsService {
     
+    static func phoneNumbersEqual(one: String!, two: String!) -> Bool {
+        var a = one
+        var b = two
+        
+        a = a?.replacingOccurrences(of: "+1", with: "")
+        b = b?.replacingOccurrences(of: "+1", with: "")
+        
+        a = a?.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
+        
+        b = b?.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
+        
+        print(a)
+        print(b)
+        
+        return a == b
+    }
+    
     func normalizePhoneNumber(number: String!) -> String? {
         do {
             let phoneNumberKit = PhoneNumberKit()
@@ -68,18 +85,7 @@ class ContactsService {
                 var phoneNumberToCompareAgainst = phoneNumber.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
                 for phoneNumber in contact.phoneNumbers {
                     if let phoneNumberStruct = phoneNumber.value as? CNPhoneNumber {
-                        var phoneNumberString = phoneNumberStruct.stringValue
-                        
-                        phoneNumberString = phoneNumberString.replacingOccurrences(of: "+1", with: "")
-                        
-                        let phoneNumberToCompare = phoneNumberString.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
-                        
-                         phoneNumberToCompareAgainst = phoneNumberToCompareAgainst.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
-                        
-                        print(phoneNumberToCompare)
-                        print(phoneNumberToCompareAgainst)
-                        
-                        if phoneNumberToCompare == phoneNumberToCompareAgainst {
+                        if ContactsService.phoneNumbersEqual(one: phoneNumberStruct.stringValue, two: phoneNumberToCompareAgainst) {
                             result.append(contact)
                         }
                     }

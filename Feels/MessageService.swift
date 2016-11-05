@@ -34,6 +34,18 @@ class MessageService {
             
             print(headers)
             
+            var cleaned = phoneNumber
+            
+            do {
+                let phoneNumberKit = PhoneNumberKit()
+                let phoneNumber = try phoneNumberKit.parse(phoneNumber)
+                cleaned = phoneNumberKit.format(phoneNumber, toType: .e164)
+                print(cleaned)
+            }
+            catch {
+                print("Generic parser error")
+            }
+            
             let parameters: [String: Any] = [
                 "receiver_phone_number": phoneNumber,
                 "message_id": messageCode
@@ -148,6 +160,7 @@ class MessageService {
                         let data = response.result.value!
                         
                         for message in data.messages {
+                            print(message.sender.phoneNumber)
                             let phoneNumber = self.contactsService.normalizePhoneNumber(number: message.sender.phoneNumber)
                             
                             if phoneNumber != nil {
@@ -156,7 +169,7 @@ class MessageService {
                                 
                                 if results.count > 0 {
                                     let contact = results[0]
-                                    message.sender.name = "\(contact.givenName) \(contact.familyName)"
+                                    message.sender.name = "\(contact.givenName) \(contact.familyName) - \(message.sender.phoneNumber!)"
                                 }
                                 else {
                                     // Couldn't find user in contacts, just use their number for their name

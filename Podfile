@@ -15,4 +15,6 @@ target 'Feels' do
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'DGElasticPullToRefresh'
   pod 'PhoneNumberKit', '~> 1.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end

@@ -14,6 +14,10 @@ import Contacts
 class MessageList: Mappable {
     var messages: [MessageModel] = []
     
+    init(messages: [MessageModel]) {
+        self.messages = messages
+    }
+    
     required init?(map: Map) {
         
     }
@@ -41,6 +45,10 @@ class User: Mappable {
 class MessageModel: Mappable {
     var message: String!
     var sender: User!
+    
+    init(message: String!) {
+        self.message = message
+    }
     
     required init?(map: Map) {
         

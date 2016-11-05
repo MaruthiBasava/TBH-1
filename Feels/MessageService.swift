@@ -144,6 +144,20 @@ class MessageService {
         })
     }
     
+    func getAnonymousMessagesFromCache() -> Observable<MessageList?> {
+        let notificationsService = NotificationsService()
+        return Observable.just(notificationsService.getAllNotifications())
+            .map({ notifications -> MessageList in
+                var messages: [MessageModel] = []
+                for n in notifications {
+                    let message = MessageModel(message: n.body)
+                    messages.append(message)
+                }
+                
+                return MessageList(messages: messages)
+            })
+    }
+    
     func getMutualMessages() -> Observable<MessageList?> {
         return Observable.create({ observer -> Disposable in
             let headers = [

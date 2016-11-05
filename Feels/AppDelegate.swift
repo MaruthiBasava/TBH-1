@@ -14,17 +14,26 @@ import Firebase
 import FirebaseMessaging
 import UserNotifications
 import Whisper
+import SwiftEventBus
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var notificationService = NotificationsService()
+    
     func showNotification() {
+        let root = window?.rootViewController as! UITabBarController
+        let item = root.tabBar.items?[1]
+        item?.badgeValue = "\(notificationService.numberOfUnread())"
+        
         let announcement = Announcement(title: "Someone is talking!", subtitle: "An anonymous girl in your contacts said something about you!")
         show(shout: announcement, to: (self.window?.rootViewController)!, completion: {
             
         })
+        
+        SwiftEventBus.post(EventBusEvents.receivedAnonymousMessage)
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
@@ -38,6 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Print full message.
         print("%@", userInfo)
+        
+        let notification = TBHNotification(title: (userInfo["alert"] as! String?) ?? "", body: (userInfo["message"] as! String?) ?? "")
+        
+        notificationService.addToUnread(notification: notification)
         
         showNotification()
     }
@@ -125,16 +138,12 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        let userInfo = notification.request.content.userInfo
-        // Print message ID.
-        print("Message ID: \(userInfo["gcm.message_id"]!)")
         
-        // Print full message.
-        print("%@", userInfo)
+        let notif = TBHNotification(title: notification.request.content.title, body: notification.request.content.body)
         
+        notificationService.addToUnread(notification: notif)
         showNotification()
     }
-    
 }
 
 extension AppDelegate : FIRMessagingDelegate {

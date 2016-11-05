@@ -13,6 +13,8 @@ import Alamofire
 import RxSwift
 import AlamofireObjectMapper
 import ObjectMapper
+import Firebase
+import FirebaseMessaging
 
 protocol AuthenticationService {
     func isAuthenticated() -> Bool
@@ -70,7 +72,8 @@ class AuthService: AuthenticationService {
         ]
         
         let params: [String: Any] = [
-            "gender": genderCode
+            "gender": genderCode,
+            "push_id": FIRInstanceID.instanceID().token()!
         ]
         
         print(params)

@@ -17,4 +17,5 @@ target 'Feels' do
   pod 'PhoneNumberKit', '~> 1.0'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
+  pod 'Whisper'
 end

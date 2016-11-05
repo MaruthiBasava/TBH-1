@@ -13,12 +13,34 @@ import RxSwift
 import Firebase
 import FirebaseMessaging
 import UserNotifications
+import Whisper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func showNotification() {
+        let announcement = Announcement(title: "Someone is talking!", subtitle: "An anonymous girl in your contacts said something about you!")
+        show(shout: announcement, to: (self.window?.rootViewController)!, completion: {
+            
+        })
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        // If you are receiving a notification message while your app is in the background,
+        // this callback will not be fired till the user taps on the notification launching the application.
+        // TODO: Handle data of notification
+        
+        // Print message ID.
+        print("Message ID: \(userInfo["gcm.message_id"]!)")
+        
+        // Print full message.
+        print("%@", userInfo)
+        
+        showNotification()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Digits.self])
@@ -96,10 +118,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-extension AppDelegate: UNUserNotificationCenterDelegate {
+@available(iOS 10, *)
+extension AppDelegate : UNUserNotificationCenterDelegate {
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+    // Receive displayed notifications for iOS 10 devices.
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+        // Print message ID.
+        print("Message ID: \(userInfo["gcm.message_id"]!)")
         
+        // Print full message.
+        print("%@", userInfo)
+        
+        showNotification()
     }
+    
 }
 
+extension AppDelegate : FIRMessagingDelegate {
+    // Receive data message on iOS 10 devices.
+    func applicationReceivedRemoteMessage(_ remoteMessage: FIRMessagingRemoteMessage) {
+        print("%@", remoteMessage.appData)
+    }
+}

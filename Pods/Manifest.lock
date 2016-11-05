@@ -48,6 +48,7 @@ PODS:
   - RxSwift (3.0.0)
   - TwitterCore (2.2.0):
     - Fabric
+  - Whisper (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - PhoneNumberKit (~> 1.0)
   - RxSwift (~> 3.0)
   - TwitterCore
+  - Whisper
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -81,7 +83,8 @@ SPEC CHECKSUMS:
   PhoneNumberKit: 0b5ea9a5454d201656db766343e9d768f8542496
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   TwitterCore: 115527630bb2986954adc928b8c895a92bcd57e5
+  Whisper: 08be92623311f8e53201e62e17f6d7b9599a4714
 
-PODFILE CHECKSUM: ec2ad7aa4dfe6b690a66d6492e7ab4ee00b52c7d
+PODFILE CHECKSUM: 83ab2562d32ec70356c2141206b14f3d65fa105c
 
 COCOAPODS: 1.1.1

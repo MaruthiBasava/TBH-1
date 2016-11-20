@@ -17,10 +17,10 @@ enum SendMessageError : String, Error {
 }
 
 class MessageService {
-    private let anonymousEndpoint = "http://192.168.1.248:8080/messages?filter=received"
-    private let mutualEndpoint = "http://192.168.1.248:8080/messages?filter=mutual"
-    private let presetsEndpoint = "http://192.168.1.248:8080/presets"
-    private let sendEndpoint = "http://192.168.1.248:8080/messages"
+    private let anonymousEndpoint = "http://tbh-development-dev.us-east-1.elasticbeanstalk.com/messages?filter=received"
+    private let mutualEndpoint = "http://tbh-development-dev.us-east-1.elasticbeanstalk.com/messages?filter=mutual"
+    private let presetsEndpoint = "http://tbh-development-dev.us-east-1.elasticbeanstalk.com/presets"
+    private let sendEndpoint = "http://tbh-development-dev.us-east-1.elasticbeanstalk.com/messages"
     
     private let authService = AuthService()
     private let contactsService = ContactsService()

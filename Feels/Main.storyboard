@@ -36,7 +36,7 @@
         <!--Notifications View Controller-->
         <scene sceneID="shC-Wx-6bF">
             <objects>
-                <viewController id="qCI-a1-WvR" customClass="NotificationsViewController" customModule="Feels" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="hello" id="qCI-a1-WvR" customClass="NotificationsViewController" customModule="Feels" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="42J-va-yx6"/>
                         <viewControllerLayoutGuide type="bottom" id="e5G-gK-q2V"/>

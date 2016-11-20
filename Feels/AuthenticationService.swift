@@ -36,8 +36,8 @@ class AuthResponse: Mappable {
 class AuthService: AuthenticationService {
     private let phoneNumberKey = "phoneNumberKey"
     private let jwtTokenKey = "jwtTokenKey"
-    private let locksmithAccount = "locksmithajhcc1aff2h2gd1"
-    private let loginEndpoint = "http://192.168.1.248:8080/auth"
+    private let locksmithAccount = "locksmithajhcc1aff2h2fgd1"
+    private let loginEndpoint = "http://tbh-development-dev.us-east-1.elasticbeanstalk.com/auth"
     
     func getAuthToken() -> String? {
         let data = Locksmith.loadDataForUserAccount(userAccount: locksmithAccount)

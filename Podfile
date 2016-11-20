@@ -18,4 +18,6 @@ target 'Feels' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Whisper'
+  pod 'SwiftEventBus', :tag => '2.1.2', :git => 'https://github.com/cesarferreira/SwiftEventBus.git'
+
 end

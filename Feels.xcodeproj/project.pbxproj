@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0284B5FF1DCDBACD00BDFEAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0284B5FE1DCDBACD00BDFEAC /* GoogleService-Info.plist */; };
+		0284B6031DCDCE9600BDFEAC /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284B6021DCDCE9600BDFEAC /* NotificationsService.swift */; };
+		0284B6051DCE640300BDFEAC /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284B6041DCE640300BDFEAC /* Events.swift */; };
 		028685471DB5A89F0083D53E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028685461DB5A89F0083D53E /* IntroViewController.swift */; };
 		028685491DB5ADA00083D53E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028685481DB5ADA00083D53E /* Constants.swift */; };
 		0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		0284B5FD1DCDB9D300BDFEAC /* Feels.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Feels.entitlements; sourceTree = "<group>"; };
 		0284B5FE1DCDBACD00BDFEAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0284B6021DCDCE9600BDFEAC /* NotificationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
+		0284B6041DCE640300BDFEAC /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		028685461DB5A89F0083D53E /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		028685481DB5ADA00083D53E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0286854A1DB5B0790083D53E /* FirstIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstIntroViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				02D54A941DC18D82004CA031 /* AuthenticationService.swift */,
 				02D54A961DC2DC3A004CA031 /* MessageService.swift */,
 				02B532C31DC6D61600EC8004 /* ContactsService.swift */,
+				0284B6021DCDCE9600BDFEAC /* NotificationsService.swift */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				028685481DB5ADA00083D53E /* Constants.swift */,
 				02954CE61DB4564900CDDBC5 /* Assets.xcassets */,
 				02954CEB1DB4564900CDDBC5 /* Info.plist */,
+				0284B6041DCE640300BDFEAC /* Events.swift */,
 			);
 			path = Feels;
 			sourceTree = "<group>";
@@ -377,6 +383,8 @@
 				02D54A9B1DC474AC004CA031 /* MainTabBarViewController.swift in Sources */,
 				02EE78F91DC6A01B00744682 /* ViewController+Dialog.swift in Sources */,
 				028685471DB5A89F0083D53E /* IntroViewController.swift in Sources */,
+				0284B6031DCDCE9600BDFEAC /* NotificationsService.swift in Sources */,
+				0284B6051DCE640300BDFEAC /* Events.swift in Sources */,
 				02B532C41DC6D61600EC8004 /* ContactsService.swift in Sources */,
 				02954D031DB4CC3900CDDBC5 /* GenderViewController.swift in Sources */,
 				0286854B1DB5B0790083D53E /* FirstIntroViewController.swift in Sources */,

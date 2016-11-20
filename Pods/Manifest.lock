@@ -46,6 +46,7 @@ PODS:
   - PhoneNumberKit/UIKit (1.0.1):
     - PhoneNumberKit/PhoneNumberKitCore
   - RxSwift (3.0.0)
+  - SwiftEventBus (2.1.0)
   - TwitterCore (2.2.0):
     - Fabric
   - Whisper (4.0.0)
@@ -61,8 +62,19 @@ DEPENDENCIES:
   - Locksmith
   - PhoneNumberKit (~> 1.0)
   - RxSwift (~> 3.0)
+  - SwiftEventBus (from `https://github.com/cesarferreira/SwiftEventBus.git`, tag `2.1.2`)
   - TwitterCore
   - Whisper
+
+EXTERNAL SOURCES:
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 2.1.2
+
+CHECKOUT OPTIONS:
+  SwiftEventBus:
+    :git: https://github.com/cesarferreira/SwiftEventBus.git
+    :tag: 2.1.2
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -82,9 +94,10 @@ SPEC CHECKSUMS:
   ObjectMapper: 4060d739febae11ab0c6af8d786f98667c82e1bd
   PhoneNumberKit: 0b5ea9a5454d201656db766343e9d768f8542496
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
+  SwiftEventBus: 03fb72b65f3ae11912dec2591567b89e5908a781
   TwitterCore: 115527630bb2986954adc928b8c895a92bcd57e5
   Whisper: 08be92623311f8e53201e62e17f6d7b9599a4714
 
-PODFILE CHECKSUM: 83ab2562d32ec70356c2141206b14f3d65fa105c
+PODFILE CHECKSUM: 887a34112632b2a7ff449d5e5c199bdde236a705
 
 COCOAPODS: 1.1.1

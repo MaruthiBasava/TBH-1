@@ -10,6 +10,7 @@ import UIKit
 import DGElasticPullToRefresh
 import RxSwift
 import Contacts
+import SwiftEventBus
 
 class NotificationCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
@@ -50,6 +51,28 @@ class NotificationsViewController: UIViewController {
         segmentedControl.layer.borderColor = UIColor.basavaRed().cgColor
         segmentedControl.layer.borderWidth = 1.0
         segmentedControl.layer.masksToBounds = true
+        
+        reloadFromCache()
+        
+        SwiftEventBus.onMainThread(self, name: EventBusEvents.receivedAnonymousMessage) { result in
+            self.reloadFromCache()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("appearing")
+        reloadFromCache()
+    }
+    
+    func reloadFromCache() {
+        messageService.getAnonymousMessagesFromCache()
+            .subscribe(onNext: { messages in
+                self.received = messages
+                self.tableView.reloadData()
+                }, onError: { error in
+                    
+                }, onCompleted: nil, onDisposed: nil)
+            .addDisposableTo(disposeBag)
     }
 
     private func loadMessages() {
